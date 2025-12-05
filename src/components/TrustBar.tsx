@@ -30,11 +30,11 @@ const stats = [
 const TrustBar = () => {
   return (
     <section className="relative py-16 lg:py-20 bg-card overflow-hidden">
-      {/* Subtle gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/[0.02] via-transparent to-accent/[0.02]" />
+      {/* Warm gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-amber-50/30 via-transparent to-orange-50/30" />
       
-      {/* Top decorative line */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+      {/* Top decorative line - Golden */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-300 to-transparent" />
       
       <div className="container mx-auto px-4 relative">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
@@ -44,13 +44,13 @@ const TrustBar = () => {
               className="text-center group animate-fade-in-up"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              {/* Icon with glow effect */}
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/5 mb-5 group-hover:bg-accent/10 transition-all duration-300 group-hover:scale-110">
-                <stat.icon className="w-7 h-7 text-primary group-hover:text-accent transition-colors duration-300" />
+              {/* Icon with warm glow effect */}
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-100 to-orange-100 mb-5 group-hover:from-amber-200 group-hover:to-orange-200 transition-all duration-300 group-hover:scale-110 shadow-soft">
+                <stat.icon className="w-7 h-7 text-amber-600 group-hover:text-amber-700 transition-colors duration-300" />
               </div>
               
-              {/* Number with gradient */}
-              <div className="text-4xl lg:text-5xl font-serif font-bold text-primary mb-2 tracking-tight">
+              {/* Number with warm gradient */}
+              <div className="text-4xl lg:text-5xl font-bold gradient-text-warm mb-2 tracking-tight">
                 {stat.number}
               </div>
               
@@ -68,8 +68,8 @@ const TrustBar = () => {
         </div>
       </div>
 
-      {/* Bottom decorative line */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+      {/* Bottom decorative line - Golden */}
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-300 to-transparent" />
     </section>
   );
 };

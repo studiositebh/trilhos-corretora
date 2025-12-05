@@ -1,5 +1,5 @@
-import { LucideIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { LucideIcon, ChevronRight } from 'lucide-react';
 
 interface StationCardProps {
   icon: LucideIcon;
@@ -7,100 +7,95 @@ interface StationCardProps {
   description: string;
   features: string[];
   ctaText: string;
-  color: 'primary' | 'accent' | 'wine';
+  color: 'amber' | 'orange' | 'gold' | 'coral';
   index: number;
 }
 
+const colorStyles = {
+  amber: {
+    iconBg: 'bg-amber-100',
+    iconColor: 'text-amber-600',
+    accentBorder: 'border-amber-200',
+    hoverBorder: 'hover:border-amber-300',
+    bullet: 'bg-amber-500',
+    buttonHover: 'hover:bg-amber-50',
+  },
+  orange: {
+    iconBg: 'bg-orange-100',
+    iconColor: 'text-orange-600',
+    accentBorder: 'border-orange-200',
+    hoverBorder: 'hover:border-orange-300',
+    bullet: 'bg-orange-500',
+    buttonHover: 'hover:bg-orange-50',
+  },
+  gold: {
+    iconBg: 'bg-yellow-100',
+    iconColor: 'text-yellow-600',
+    accentBorder: 'border-yellow-200',
+    hoverBorder: 'hover:border-yellow-300',
+    bullet: 'bg-yellow-500',
+    buttonHover: 'hover:bg-yellow-50',
+  },
+  coral: {
+    iconBg: 'bg-rose-100',
+    iconColor: 'text-rose-600',
+    accentBorder: 'border-rose-200',
+    hoverBorder: 'hover:border-rose-300',
+    bullet: 'bg-rose-500',
+    buttonHover: 'hover:bg-rose-50',
+  }
+};
+
 const StationCard = ({ icon: Icon, title, description, features, ctaText, color, index }: StationCardProps) => {
-  const colorConfig = {
-    primary: {
-      iconBg: 'bg-primary-foreground/10',
-      iconBgHover: 'group-hover:bg-primary-foreground/20',
-      iconColor: 'text-primary-foreground',
-      dot: 'bg-accent',
-      glow: 'group-hover:shadow-[0_0_40px_hsl(24_70%_50%/0.2)]'
-    },
-    accent: {
-      iconBg: 'bg-accent/20',
-      iconBgHover: 'group-hover:bg-accent/30',
-      iconColor: 'text-accent',
-      dot: 'bg-accent',
-      glow: 'group-hover:shadow-[0_0_40px_hsl(24_70%_50%/0.25)]'
-    },
-    wine: {
-      iconBg: 'bg-secondary/20',
-      iconBgHover: 'group-hover:bg-secondary/30',
-      iconColor: 'text-secondary-foreground',
-      dot: 'bg-accent',
-      glow: 'group-hover:shadow-[0_0_40px_hsl(352_43%_32%/0.2)]'
-    }
-  };
-
-  const config = colorConfig[color];
-
   const handleClick = () => {
-    window.open(`https://wa.me/5531999999999?text=Olá! Gostaria de cotar ${title.replace('Estação ', '')}.`, '_blank');
+    window.open(`https://wa.me/5531999999999?text=Olá! Gostaria de uma cotação de ${title}.`, '_blank');
   };
+
+  const styles = colorStyles[color];
 
   return (
     <div 
-      className={`
-        group relative rounded-2xl p-8
-        bg-white/5 backdrop-blur-xl border border-white/10
-        transition-all duration-500 ease-out
-        hover:-translate-y-2 ${config.glow}
-        animate-fade-in-up
-      `}
+      className={`group relative bg-card rounded-3xl p-6 lg:p-8 transition-all duration-500 hover:shadow-elevated hover:-translate-y-2 animate-fade-in-up border ${styles.accentBorder} ${styles.hoverBorder}`}
       style={{ 
-        animationDelay: `${index * 150}ms`,
-        boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.2)'
+        animationDelay: `${index * 100 + 200}ms`,
+        boxShadow: '0 10px 40px -10px hsl(30 50% 30% / 0.15)'
       }}
     >
-      {/* Gradient Border Effect on Hover */}
-      <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-accent/0 via-transparent to-white/0 group-hover:from-accent/10 group-hover:to-white/5 transition-all duration-500" />
-
-      {/* Content */}
-      <div className="relative">
-        {/* Icon with Circular Background */}
-        <div className={`
-          inline-flex items-center justify-center w-16 h-16 rounded-full 
-          ${config.iconBg} ${config.iconBgHover}
-          mb-6 transition-all duration-300
-          group-hover:scale-110
-        `}>
-          <Icon className={`w-7 h-7 ${config.iconColor}`} />
-        </div>
-
-        {/* Title */}
-        <h3 className="text-xl font-bold text-primary-foreground mb-3 tracking-tight">
-          {title}
-        </h3>
-
-        {/* Description */}
-        <p className="text-primary-foreground/60 mb-5 text-sm leading-relaxed font-light">
-          {description}
-        </p>
-
-        {/* Features */}
-        <ul className="space-y-2.5 mb-8">
-          {features.map((feature, i) => (
-            <li key={i} className="flex items-start gap-3 text-sm text-primary-foreground/80">
-              <span className={`w-1.5 h-1.5 rounded-full ${config.dot} mt-1.5 flex-shrink-0`} />
-              <span className="font-light">{feature}</span>
-            </li>
-          ))}
-        </ul>
-
-        {/* CTA Button */}
-        <Button 
-          variant="hero" 
-          size="default"
-          className="w-full group/btn"
-          onClick={handleClick}
-        >
-          <span className="relative z-10">{ctaText}</span>
-        </Button>
+      {/* Icon with Warm Circular Background */}
+      <div className={`w-14 h-14 rounded-2xl ${styles.iconBg} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-soft`}>
+        <Icon className={`w-7 h-7 ${styles.iconColor}`} />
       </div>
+
+      {/* Title */}
+      <h3 className="text-xl font-bold text-foreground mb-3 tracking-tight">
+        {title}
+      </h3>
+
+      {/* Description */}
+      <p className="text-muted-foreground text-sm mb-5 leading-relaxed">
+        {description}
+      </p>
+
+      {/* Features */}
+      <ul className="space-y-2.5 mb-6">
+        {features.map((feature, idx) => (
+          <li key={idx} className="flex items-start gap-2.5 text-sm text-foreground/80">
+            <div className={`w-1.5 h-1.5 rounded-full ${styles.bullet} mt-1.5 flex-shrink-0`} />
+            <span>{feature}</span>
+          </li>
+        ))}
+      </ul>
+
+      {/* CTA Button */}
+      <Button 
+        variant="outline" 
+        size="sm" 
+        onClick={handleClick}
+        className={`w-full group/btn border-border ${styles.buttonHover} text-foreground`}
+      >
+        {ctaText}
+        <ChevronRight className="w-4 h-4 ml-1 transition-transform group-hover/btn:translate-x-1" />
+      </Button>
     </div>
   );
 };
