@@ -50,7 +50,7 @@ const Index = () => {
       <div className="min-h-screen bg-background">
         <Header />
         
-        <main className="pt-32">
+        <main>
           <Hero />
           <TrustBar />
           <StationsSection />
