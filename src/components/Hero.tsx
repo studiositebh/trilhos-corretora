@@ -46,8 +46,8 @@ const Hero = () => {
             </span>
           </div>
 
-          {/* Headline with Elegant Typography */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-primary-foreground mb-8 leading-[1.1] animate-fade-in-up animation-delay-100">
+          {/* Headline with Poppins Bold */}
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-primary-foreground mb-8 leading-[1.05] animate-fade-in-up animation-delay-100 tracking-tight">
             A vida nos trilhos.
             <br />
             <span className="gradient-text-accent">O futuro sob controle.</span>
