@@ -51,12 +51,15 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Custom colors
-        "deep-blue": "hsl(var(--deep-blue))",
+        // Custom Premium Colors
+        "deep-navy": "hsl(var(--deep-navy))",
+        "navy-light": "hsl(var(--navy-light))",
         "terra-orange": "hsl(var(--terra-orange))",
+        "ochre": "hsl(var(--ochre))",
         "wine": "hsl(var(--wine))",
         "off-white": "hsl(var(--off-white))",
         "cream": "hsl(var(--cream))",
+        "slate": "hsl(var(--slate))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
