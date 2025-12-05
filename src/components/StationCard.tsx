@@ -14,25 +14,25 @@ interface StationCardProps {
 const StationCard = ({ icon: Icon, title, description, features, ctaText, color, index }: StationCardProps) => {
   const colorConfig = {
     primary: {
-      iconBg: 'bg-primary/10',
-      iconBgHover: 'group-hover:bg-primary/20',
-      iconColor: 'text-primary',
-      dot: 'bg-primary',
-      glow: 'group-hover:shadow-[0_0_30px_hsl(222_47%_11%/0.15)]'
+      iconBg: 'bg-primary-foreground/10',
+      iconBgHover: 'group-hover:bg-primary-foreground/20',
+      iconColor: 'text-primary-foreground',
+      dot: 'bg-accent',
+      glow: 'group-hover:shadow-[0_0_40px_hsl(24_70%_50%/0.2)]'
     },
     accent: {
-      iconBg: 'bg-accent/10',
-      iconBgHover: 'group-hover:bg-accent/20',
+      iconBg: 'bg-accent/20',
+      iconBgHover: 'group-hover:bg-accent/30',
       iconColor: 'text-accent',
       dot: 'bg-accent',
-      glow: 'group-hover:shadow-[0_0_30px_hsl(24_70%_50%/0.15)]'
+      glow: 'group-hover:shadow-[0_0_40px_hsl(24_70%_50%/0.25)]'
     },
     wine: {
-      iconBg: 'bg-secondary/10',
-      iconBgHover: 'group-hover:bg-secondary/20',
-      iconColor: 'text-secondary',
-      dot: 'bg-secondary',
-      glow: 'group-hover:shadow-[0_0_30px_hsl(352_43%_32%/0.15)]'
+      iconBg: 'bg-secondary/20',
+      iconBgHover: 'group-hover:bg-secondary/30',
+      iconColor: 'text-secondary-foreground',
+      dot: 'bg-accent',
+      glow: 'group-hover:shadow-[0_0_40px_hsl(352_43%_32%/0.2)]'
     }
   };
 
@@ -45,15 +45,19 @@ const StationCard = ({ icon: Icon, title, description, features, ctaText, color,
   return (
     <div 
       className={`
-        group relative glass-card-strong rounded-2xl p-8
+        group relative rounded-2xl p-8
+        bg-white/5 backdrop-blur-xl border border-white/10
         transition-all duration-500 ease-out
         hover:-translate-y-2 ${config.glow}
         animate-fade-in-up
       `}
-      style={{ animationDelay: `${index * 150}ms` }}
+      style={{ 
+        animationDelay: `${index * 150}ms`,
+        boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.2)'
+      }}
     >
       {/* Gradient Border Effect on Hover */}
-      <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-accent/0 via-accent/0 to-accent/0 group-hover:from-accent/5 group-hover:via-transparent group-hover:to-primary/5 transition-all duration-500" />
+      <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-accent/0 via-transparent to-white/0 group-hover:from-accent/10 group-hover:to-white/5 transition-all duration-500" />
 
       {/* Content */}
       <div className="relative">
@@ -68,28 +72,29 @@ const StationCard = ({ icon: Icon, title, description, features, ctaText, color,
         </div>
 
         {/* Title */}
-        <h3 className="text-xl font-serif font-bold text-foreground mb-3">
+        <h3 className="text-xl font-bold text-primary-foreground mb-3 tracking-tight">
           {title}
         </h3>
 
         {/* Description */}
-        <p className="text-muted-foreground mb-5 text-sm leading-relaxed">
+        <p className="text-primary-foreground/60 mb-5 text-sm leading-relaxed font-light">
           {description}
         </p>
 
         {/* Features */}
         <ul className="space-y-2.5 mb-8">
           {features.map((feature, i) => (
-            <li key={i} className="flex items-start gap-3 text-sm text-foreground/80">
+            <li key={i} className="flex items-start gap-3 text-sm text-primary-foreground/80">
               <span className={`w-1.5 h-1.5 rounded-full ${config.dot} mt-1.5 flex-shrink-0`} />
-              <span>{feature}</span>
+              <span className="font-light">{feature}</span>
             </li>
           ))}
         </ul>
 
         {/* CTA Button */}
         <Button 
-          variant="ctaOutline" 
+          variant="hero" 
+          size="default"
           className="w-full group/btn"
           onClick={handleClick}
         >

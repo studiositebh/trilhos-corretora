@@ -58,13 +58,18 @@ const stations = [
 
 const StationsSection = () => {
   return (
-    <section id="estacoes" className="py-24 lg:py-32 bg-muted relative overflow-hidden">
-      {/* Subtle Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-muted to-background" />
+    <section id="estacoes" className="py-24 lg:py-32 bg-primary relative overflow-hidden">
+      {/* Dark Navy Background with Gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-navy-light" />
       
-      {/* Decorative Elements */}
-      <div className="absolute top-20 left-10 w-72 h-72 rounded-full bg-accent/5 blur-3xl" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-primary/5 blur-3xl" />
+      {/* Subtle Glow Effects */}
+      <div className="absolute top-20 left-10 w-72 h-72 rounded-full bg-accent/10 blur-3xl" />
+      <div className="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-secondary/10 blur-3xl" />
+      
+      {/* Noise Texture */}
+      <div className="absolute inset-0 opacity-[0.03]" style={{
+        backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+      }} />
       
       <div className="container mx-auto px-4 relative">
         {/* Section Header */}
@@ -72,10 +77,10 @@ const StationsSection = () => {
           <span className="inline-block text-accent font-semibold text-sm uppercase tracking-[0.2em] mb-4">
             Nossos Produtos
           </span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground mb-6">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground mb-6 tracking-tight">
             As Estações da Sua Vida
           </h2>
-          <p className="text-muted-foreground text-lg leading-relaxed">
+          <p className="text-primary-foreground/70 text-lg leading-relaxed font-light">
             Em cada fase, uma proteção sob medida. Descubra a solução ideal para você e sua família.
           </p>
         </div>
@@ -100,8 +105,8 @@ const StationsSection = () => {
                   transform: 'translateX(-50%)'
                 }}
               >
-                <div className="w-4 h-4 rounded-full bg-background border-2 border-accent shadow-lg" 
-                  style={{ boxShadow: '0 0 15px hsl(var(--accent) / 0.4)' }} 
+                <div className="w-4 h-4 rounded-full bg-primary border-2 border-accent shadow-lg" 
+                  style={{ boxShadow: '0 0 20px hsl(var(--accent) / 0.5)' }} 
                 />
               </div>
             ))}
