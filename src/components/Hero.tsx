@@ -14,10 +14,9 @@ const Hero = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
         style={{ backgroundImage: `url(${heroBg})` }}
       >
-        {/* Left-side dark gradient for text readability - keeps right side bright */}
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/95 via-60% to-transparent" />
-        {/* Bottom fade for smooth transition */}
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent" />
+        {/* Warm Golden Overlay - Subtle to keep image vibrant */}
+        <div className="absolute inset-0 bg-gradient-to-br from-amber-900/30 via-orange-900/25 to-amber-800/35" />
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-amber-500/10" />
       </div>
 
       {/* Sun Rays Effect */}
@@ -51,15 +50,15 @@ const Hero = () => {
             </span>
           </div>
 
-          {/* Headline with Poppins ExtraBold (800) for maximum readability */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-[800] text-white mb-8 leading-[1.05] animate-fade-in-up animation-delay-100 tracking-tight" style={{ textShadow: '0 4px 12px rgba(0,0,0,0.5), 0 2px 4px rgba(0,0,0,0.4)' }}>
+          {/* Headline with Poppins Bold */}
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-8 leading-[1.05] animate-fade-in-up animation-delay-100 tracking-tight drop-shadow-lg">
             A vida nos trilhos.
             <br />
-            <span className="text-orange-400 font-[800]" style={{ textShadow: 'none' }}>O futuro sob controle.</span>
+            <span className="gradient-text-warm">O futuro sob controle.</span>
           </h1>
 
-          {/* Subheadline with strong shadow */}
-          <p className="text-lg md:text-xl text-white mb-10 leading-relaxed max-w-2xl animate-fade-in-up animation-delay-200 font-medium" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.5), 0 1px 3px rgba(0,0,0,0.4)' }}>
+          {/* Subheadline */}
+          <p className="text-lg md:text-xl text-white/85 mb-10 leading-relaxed max-w-2xl animate-fade-in-up animation-delay-200 font-light drop-shadow-md">
             Consultoria especializada em <span className="text-white font-medium">Seguros</span>, <span className="text-white font-medium">Planos de Saúde</span> e <span className="text-white font-medium">Previdência</span>. 
             Protegemos seu patrimônio e sua família com atendimento humanizado e sob medida.
           </p>
