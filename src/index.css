@@ -5,6 +5,10 @@
 /* Poppins is loaded via index.html for better performance */
 
 @layer base {
+  * {
+    font-family: 'Poppins', sans-serif;
+  }
+  
   :root {
     /* Backgrounds - Warm Off-white for comfort */
     --background: 40 30% 98%;

@@ -36,7 +36,7 @@ const FAQSection = () => {
               Dúvidas Frequentes
             </span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-poppins font-extrabold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl font-sans font-extrabold text-foreground mb-4">
             Tira-Dúvidas
           </h2>
           <p className="text-muted-foreground text-lg">
