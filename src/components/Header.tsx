@@ -34,17 +34,17 @@ const Header = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? 'bg-white/95 backdrop-blur-md shadow-warm'
-          : 'bg-white/80 backdrop-blur-sm'
+          : 'bg-transparent'
       }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo Text */}
           <a href="/" className="flex flex-col leading-none">
-            <span className="text-2xl md:text-3xl font-extrabold text-[#0f172a] tracking-tight">
+            <span className={`text-2xl md:text-3xl font-extrabold tracking-tight transition-colors duration-300 ${isScrolled ? 'text-[#0f172a]' : 'text-white'}`}>
               TRILHOS
             </span>
-            <span className="text-[10px] md:text-xs font-medium text-[#0f172a] uppercase tracking-[0.3em]">
+            <span className={`text-[10px] md:text-xs font-medium uppercase tracking-[0.3em] transition-colors duration-300 ${isScrolled ? 'text-[#0f172a]' : 'text-white/90'}`}>
               Corretora de Seguros
             </span>
           </a>
@@ -55,10 +55,10 @@ const Header = () => {
               <button
                 key={link.label}
                 onClick={() => scrollToSection(link.href)}
-                className="text-foreground/80 hover:text-primary font-medium transition-colors relative group"
+                className={`font-medium transition-colors relative group ${isScrolled ? 'text-foreground/80 hover:text-primary' : 'text-white/90 hover:text-white'}`}
               >
                 {link.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full" />
+                <span className={`absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${isScrolled ? 'bg-accent' : 'bg-white'}`} />
               </button>
             ))}
             <Button
@@ -74,7 +74,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-foreground"
+            className={`md:hidden p-2 transition-colors ${isScrolled ? 'text-foreground' : 'text-white'}`}
             aria-label="Menu"
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -83,7 +83,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <nav className="md:hidden pb-6 animate-fade-in">
+          <nav className={`md:hidden pb-6 animate-fade-in ${isScrolled ? '' : 'bg-black/50 backdrop-blur-md rounded-b-2xl px-4'}`}>
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <button
