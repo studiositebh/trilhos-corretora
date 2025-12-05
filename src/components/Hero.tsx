@@ -15,7 +15,7 @@ const Hero = () => {
         style={{ backgroundImage: `url(${heroBg})` }}
       >
         {/* Left-side dark gradient for text readability - keeps right side bright */}
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/95 via-60% to-transparent" />
         {/* Bottom fade for smooth transition */}
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent" />
       </div>
@@ -55,7 +55,7 @@ const Hero = () => {
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-[800] text-white mb-8 leading-[1.05] animate-fade-in-up animation-delay-100 tracking-tight" style={{ textShadow: '0 4px 12px rgba(0,0,0,0.5), 0 2px 4px rgba(0,0,0,0.4)' }}>
             A vida nos trilhos.
             <br />
-            <span className="text-amber-400 font-[800]" style={{ textShadow: 'none' }}>O futuro sob controle.</span>
+            <span className="text-orange-400 font-[800]" style={{ textShadow: 'none' }}>O futuro sob controle.</span>
           </h1>
 
           {/* Subheadline with strong shadow */}
