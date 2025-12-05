@@ -2,7 +2,7 @@ import { Phone, Mail, MapPin, Shield, Clock } from 'lucide-react';
 
 const TopBar = () => {
   return (
-    <div className="bg-primary text-primary-foreground py-2">
+    <div className="fixed top-20 left-0 right-0 z-40 bg-primary text-primary-foreground py-2">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-2 text-sm">
           {/* Contact Info */}

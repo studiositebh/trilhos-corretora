@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { MessageCircle, ChevronRight, Sun } from 'lucide-react';
-import heroBg from '@/assets/hero-golden.jpg';
+import heroBg from '@/assets/hero-family-sunset.jpg';
 
 const Hero = () => {
   const handleWhatsApp = () => {
