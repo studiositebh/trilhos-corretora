@@ -1,10 +1,14 @@
 import { Helmet } from 'react-helmet-async';
+import Header from '@/components/Header';
 import TopBar from '@/components/TopBar';
 import Hero from '@/components/Hero';
 import TrustBar from '@/components/TrustBar';
 import StationsSection from '@/components/StationsSection';
+import CTABreak from '@/components/CTABreak';
 import ConductorSection from '@/components/ConductorSection';
+import TestimonialsSection from '@/components/TestimonialsSection';
 import SegmentationSection from '@/components/SegmentationSection';
+import BlogSection from '@/components/BlogSection';
 import FAQSection from '@/components/FAQSection';
 import Footer from '@/components/Footer';
 import FloatingWhatsApp from '@/components/FloatingWhatsApp';
@@ -46,14 +50,27 @@ const Index = () => {
       </Helmet>
 
       <div className="min-h-screen bg-background">
+        <Header />
         <TopBar />
-        <main>
+        <main className="pt-32">
           <Hero />
           <TrustBar />
           <StationsSection />
+          <CTABreak 
+            variant="navy"
+            title="Não sabe qual estação descer? Fale com nosso Maquinista."
+            buttonText="Ajuda Rápida"
+          />
           <ConductorSection />
+          <TestimonialsSection />
           <SegmentationSection />
           <FAQSection />
+          <BlogSection />
+          <CTABreak 
+            variant="warm"
+            title="Pronto para embarcar na sua jornada de proteção?"
+            buttonText="Começar Agora"
+          />
         </main>
         <Footer />
         <FloatingWhatsApp />
