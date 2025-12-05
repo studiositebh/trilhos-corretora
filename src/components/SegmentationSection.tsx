@@ -13,10 +13,13 @@ const SegmentationSection = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block text-amber-600 font-semibold text-sm uppercase tracking-wider mb-3">
-            Para Quem É
-          </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="w-12 h-px bg-gradient-to-r from-amber-500 to-orange-500" />
+            <span className="text-amber-600 font-semibold text-sm uppercase tracking-[0.2em]">
+              Para Quem É
+            </span>
+          </div>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground mb-4">
             Soluções Para Cada Necessidade
           </h2>
           <p className="text-muted-foreground text-lg">

@@ -41,9 +41,12 @@ const StationsSection = () => {
       <div className="container mx-auto px-4 relative">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="inline-block text-amber-600 font-semibold text-sm uppercase tracking-[0.2em] mb-4">
-            Nossos Produtos
-          </span>
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="w-12 h-px bg-gradient-to-r from-amber-500 to-orange-500" />
+            <span className="text-amber-600 font-semibold text-sm uppercase tracking-[0.2em]">
+              Nossos Produtos
+            </span>
+          </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary mb-6 tracking-tight">
             As Estações da Sua Vida
           </h2>
