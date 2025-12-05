@@ -31,9 +31,12 @@ const BlogSection = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-14">
-          <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
-            Blog
-          </span>
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="w-12 h-px bg-gradient-to-r from-amber-500 to-orange-500" />
+            <span className="text-amber-600 font-semibold text-sm uppercase tracking-[0.2em]">
+              Blog
+            </span>
+          </div>
           <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-4">
             Diário de Bordo
           </h2>
