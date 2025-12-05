@@ -79,7 +79,7 @@ const StationsSection = () => {
           </div>
 
           {/* Station Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 pt-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 pt-4">
             {stations.map((station, index) => <div key={index} className="relative">
                 {/* Vertical connector line - Mobile/Tablet */}
                 {index < stations.length - 1 && <div className="lg:hidden absolute left-1/2 -bottom-6 w-px h-12 bg-gradient-to-b from-amber-400/50 to-transparent -translate-x-1/2" />}
