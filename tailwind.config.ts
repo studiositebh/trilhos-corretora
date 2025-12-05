@@ -51,9 +51,14 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Custom Premium Colors
+        // Custom Premium Colors - Golden Hour
         "deep-navy": "hsl(var(--deep-navy))",
         "navy-light": "hsl(var(--navy-light))",
+        "golden-amber": "hsl(var(--golden-amber))",
+        "sunset-orange": "hsl(var(--sunset-orange))",
+        "warm-gold": "hsl(var(--warm-gold))",
+        "warm-cream": "hsl(var(--warm-cream))",
+        "warm-beige": "hsl(var(--warm-beige))",
         "terra-orange": "hsl(var(--terra-orange))",
         "ochre": "hsl(var(--ochre))",
         "wine": "hsl(var(--wine))",
@@ -75,17 +80,23 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+        "3xl": "1.5rem",
+        "4xl": "2rem",
       },
       boxShadow: {
         'soft': 'var(--shadow-soft)',
         'card': 'var(--shadow-card)',
         'elevated': 'var(--shadow-elevated)',
         'cta': 'var(--shadow-cta)',
+        'warm': 'var(--shadow-warm)',
+        'glow': 'var(--shadow-glow)',
       },
       backgroundImage: {
         'gradient-hero': 'var(--gradient-hero)',
         'gradient-cta': 'var(--gradient-cta)',
         'gradient-wine': 'var(--gradient-wine)',
+        'gradient-warm': 'var(--gradient-warm)',
+        'gradient-golden': 'var(--gradient-golden)',
       },
       keyframes: {
         "accordion-down": {
@@ -104,12 +115,17 @@ export default {
           "0%": { transform: "scale(0.95)", opacity: "0" },
           "100%": { transform: "scale(1)", opacity: "1" },
         },
+        "glow-pulse": {
+          "0%, 100%": { boxShadow: "0 0 30px hsl(38 92% 50% / 0.4)" },
+          "50%": { boxShadow: "0 0 50px hsl(38 92% 50% / 0.6)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 0.5s ease-out forwards",
         "scale-in": "scale-in 0.3s ease-out forwards",
+        "glow-pulse": "glow-pulse 2s ease-in-out infinite",
       },
     },
   },

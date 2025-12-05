@@ -1,5 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Users, Building, Shield, Heart, Briefcase, Car } from 'lucide-react';
+import familyImg from '@/assets/family-happy.jpg';
+import teamImg from '@/assets/team-corporate.jpg';
 
 const SegmentationSection = () => {
   const handleWhatsApp = (segment: string) => {
@@ -11,10 +13,10 @@ const SegmentationSection = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-3">
+          <span className="inline-block text-amber-600 font-semibold text-sm uppercase tracking-wider mb-3">
             Para Quem É
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             Soluções Para Cada Necessidade
           </h2>
           <p className="text-muted-foreground text-lg">
@@ -22,25 +24,26 @@ const SegmentationSection = () => {
           </p>
         </div>
 
-        {/* Two Column Split */}
+        {/* Two Column Split with Photos */}
         <div className="grid lg:grid-cols-2 gap-8">
           {/* For You and Family */}
-          <div className="group relative bg-gradient-to-br from-primary via-primary to-primary/90 rounded-2xl p-8 lg:p-10 text-primary-foreground overflow-hidden">
-            {/* Decorative Pattern */}
-            <div className="absolute top-0 right-0 w-64 h-64 opacity-10">
-              <svg viewBox="0 0 200 200" className="w-full h-full">
-                <circle cx="100" cy="100" r="80" fill="none" stroke="currentColor" strokeWidth="2" />
-                <circle cx="100" cy="100" r="60" fill="none" stroke="currentColor" strokeWidth="2" />
-                <circle cx="100" cy="100" r="40" fill="none" stroke="currentColor" strokeWidth="2" />
-              </svg>
+          <div className="group relative bg-gradient-to-br from-primary via-primary to-primary/90 rounded-3xl overflow-hidden">
+            {/* Background Photo */}
+            <div className="absolute inset-0">
+              <img 
+                src={familyImg} 
+                alt="Família feliz se abraçando" 
+                className="w-full h-full object-cover opacity-20 group-hover:opacity-25 transition-opacity duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/85 to-primary/80" />
             </div>
 
-            <div className="relative">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary-foreground/10 mb-6">
-                <Users className="w-8 h-8" />
+            <div className="relative p-8 lg:p-10 text-primary-foreground">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-amber-500/20 mb-6">
+                <Users className="w-8 h-8 text-amber-400" />
               </div>
 
-              <h3 className="text-2xl md:text-3xl font-serif font-bold mb-4">
+              <h3 className="text-2xl md:text-3xl font-bold mb-4">
                 Para Você e Sua Família
               </h3>
 
@@ -53,28 +56,37 @@ const SegmentationSection = () => {
               {/* Benefits */}
               <div className="grid grid-cols-2 gap-4 mb-8">
                 <div className="flex items-center gap-3">
-                  <Heart className="w-5 h-5 text-accent" />
+                  <Heart className="w-5 h-5 text-amber-400" />
                   <span className="text-sm">Seguro de Vida</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Shield className="w-5 h-5 text-accent" />
+                  <Shield className="w-5 h-5 text-amber-400" />
                   <span className="text-sm">Planos de Saúde</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Car className="w-5 h-5 text-accent" />
+                  <Car className="w-5 h-5 text-amber-400" />
                   <span className="text-sm">Auto e Residência</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Briefcase className="w-5 h-5 text-accent" />
+                  <Briefcase className="w-5 h-5 text-amber-400" />
                   <span className="text-sm">Previdência</span>
                 </div>
+              </div>
+
+              {/* Photo Preview */}
+              <div className="mb-6 rounded-2xl overflow-hidden border-2 border-white/10">
+                <img 
+                  src={familyImg} 
+                  alt="Família feliz" 
+                  className="w-full h-48 object-cover"
+                />
               </div>
 
               <Button 
                 variant="heroOutline"
                 size="lg"
                 onClick={() => handleWhatsApp('minha família')}
-                className="w-full sm:w-auto"
+                className="w-full sm:w-auto bg-amber-500 hover:bg-amber-400 text-white border-0"
               >
                 Proteger Minha Família
               </Button>
@@ -82,22 +94,23 @@ const SegmentationSection = () => {
           </div>
 
           {/* For Your Business */}
-          <div className="group relative bg-gradient-to-br from-secondary via-secondary to-secondary/90 rounded-2xl p-8 lg:p-10 text-secondary-foreground overflow-hidden">
-            {/* Decorative Pattern */}
-            <div className="absolute top-0 right-0 w-64 h-64 opacity-10">
-              <svg viewBox="0 0 200 200" className="w-full h-full">
-                <rect x="40" y="40" width="120" height="120" fill="none" stroke="currentColor" strokeWidth="2" />
-                <rect x="60" y="60" width="80" height="80" fill="none" stroke="currentColor" strokeWidth="2" />
-                <rect x="80" y="80" width="40" height="40" fill="none" stroke="currentColor" strokeWidth="2" />
-              </svg>
+          <div className="group relative bg-gradient-to-br from-secondary via-secondary to-secondary/90 rounded-3xl overflow-hidden">
+            {/* Background Photo */}
+            <div className="absolute inset-0">
+              <img 
+                src={teamImg} 
+                alt="Equipe corporativa feliz" 
+                className="w-full h-full object-cover opacity-20 group-hover:opacity-25 transition-opacity duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-br from-secondary/90 via-secondary/85 to-secondary/80" />
             </div>
 
-            <div className="relative">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-secondary-foreground/10 mb-6">
-                <Building className="w-8 h-8" />
+            <div className="relative p-8 lg:p-10 text-secondary-foreground">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-amber-500/20 mb-6">
+                <Building className="w-8 h-8 text-amber-400" />
               </div>
 
-              <h3 className="text-2xl md:text-3xl font-serif font-bold mb-4">
+              <h3 className="text-2xl md:text-3xl font-bold mb-4">
                 Para Sua Empresa
               </h3>
 
@@ -110,28 +123,37 @@ const SegmentationSection = () => {
               {/* Benefits */}
               <div className="grid grid-cols-2 gap-4 mb-8">
                 <div className="flex items-center gap-3">
-                  <Shield className="w-5 h-5 text-accent" />
+                  <Shield className="w-5 h-5 text-amber-400" />
                   <span className="text-sm">Responsabilidade Civil</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Car className="w-5 h-5 text-accent" />
+                  <Car className="w-5 h-5 text-amber-400" />
                   <span className="text-sm">Frotas</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Heart className="w-5 h-5 text-accent" />
+                  <Heart className="w-5 h-5 text-amber-400" />
                   <span className="text-sm">Saúde Corporativa</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Building className="w-5 h-5 text-accent" />
+                  <Building className="w-5 h-5 text-amber-400" />
                   <span className="text-sm">Seguro Empresarial</span>
                 </div>
+              </div>
+
+              {/* Photo Preview */}
+              <div className="mb-6 rounded-2xl overflow-hidden border-2 border-white/10">
+                <img 
+                  src={teamImg} 
+                  alt="Equipe corporativa" 
+                  className="w-full h-48 object-cover"
+                />
               </div>
 
               <Button 
                 variant="heroOutline"
                 size="lg"
                 onClick={() => handleWhatsApp('minha empresa')}
-                className="w-full sm:w-auto"
+                className="w-full sm:w-auto bg-amber-500 hover:bg-amber-400 text-white border-0"
               >
                 Proteger Minha Empresa
               </Button>

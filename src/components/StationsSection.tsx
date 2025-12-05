@@ -13,7 +13,7 @@ const stations = [
       'Indenização por doenças graves'
     ],
     ctaText: 'Cotar Vida',
-    color: 'primary' as const
+    color: 'amber' as const
   },
   {
     icon: Activity,
@@ -26,7 +26,7 @@ const stations = [
       'Reembolso facilitado'
     ],
     ctaText: 'Cotar Saúde',
-    color: 'accent' as const
+    color: 'orange' as const
   },
   {
     icon: Car,
@@ -39,7 +39,7 @@ const stations = [
       'Cobertura para terceiros'
     ],
     ctaText: 'Cotar Patrimônio',
-    color: 'wine' as const
+    color: 'gold' as const
   },
   {
     icon: Building2,
@@ -52,49 +52,44 @@ const stations = [
       'Seguro D&O'
     ],
     ctaText: 'Cotar Empresarial',
-    color: 'primary' as const
+    color: 'coral' as const
   }
 ];
 
 const StationsSection = () => {
   return (
-    <section id="estacoes" className="py-24 lg:py-32 bg-primary relative overflow-hidden">
-      {/* Dark Navy Background with Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-navy-light" />
+    <section id="estacoes" className="py-24 lg:py-32 bg-warm-gradient relative overflow-hidden">
+      {/* Warm Background Gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-amber-50/50 via-orange-50/30 to-amber-100/40" />
       
-      {/* Subtle Glow Effects */}
-      <div className="absolute top-20 left-10 w-72 h-72 rounded-full bg-accent/10 blur-3xl" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-secondary/10 blur-3xl" />
-      
-      {/* Noise Texture */}
-      <div className="absolute inset-0 opacity-[0.03]" style={{
-        backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
-      }} />
+      {/* Subtle Golden Glow Effects */}
+      <div className="absolute top-20 left-10 w-72 h-72 rounded-full bg-amber-300/20 blur-3xl" />
+      <div className="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-orange-300/20 blur-3xl" />
       
       <div className="container mx-auto px-4 relative">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <span className="inline-block text-accent font-semibold text-sm uppercase tracking-[0.2em] mb-4">
+          <span className="inline-block text-amber-600 font-semibold text-sm uppercase tracking-[0.2em] mb-4">
             Nossos Produtos
           </span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground mb-6 tracking-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary mb-6 tracking-tight">
             As Estações da Sua Vida
           </h2>
-          <p className="text-primary-foreground/70 text-lg leading-relaxed font-light">
+          <p className="text-muted-foreground text-lg leading-relaxed font-light">
             Em cada fase, uma proteção sob medida. Descubra a solução ideal para você e sua família.
           </p>
         </div>
 
         {/* Visual Journey - Station Cards with Rail Line */}
         <div className="relative">
-          {/* Horizontal Rail Line - Desktop */}
+          {/* Horizontal Rail Line - Desktop - Golden */}
           <div className="hidden lg:block absolute top-8 left-[10%] right-[10%] h-[2px]">
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-amber-400/50 to-transparent" />
             {/* Animated train light effect */}
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent to-transparent opacity-50 animate-pulse" style={{ animationDuration: '3s' }} />
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-amber-500 to-transparent opacity-60 animate-pulse" style={{ animationDuration: '3s' }} />
           </div>
 
-          {/* Station Connector Dots - Desktop */}
+          {/* Station Connector Dots - Desktop - Golden */}
           <div className="hidden lg:flex absolute top-8 left-[10%] right-[10%] justify-between -translate-y-1/2">
             {stations.map((_, index) => (
               <div 
@@ -105,8 +100,8 @@ const StationsSection = () => {
                   transform: 'translateX(-50%)'
                 }}
               >
-                <div className="w-4 h-4 rounded-full bg-primary border-2 border-accent shadow-lg" 
-                  style={{ boxShadow: '0 0 20px hsl(var(--accent) / 0.5)' }} 
+                <div className="w-4 h-4 rounded-full bg-white border-2 border-amber-500 shadow-lg" 
+                  style={{ boxShadow: '0 0 20px hsl(38 92% 50% / 0.5)' }} 
                 />
               </div>
             ))}
@@ -118,7 +113,7 @@ const StationsSection = () => {
               <div key={index} className="relative">
                 {/* Vertical connector line - Mobile/Tablet */}
                 {index < stations.length - 1 && (
-                  <div className="lg:hidden absolute left-1/2 -bottom-6 w-px h-12 bg-gradient-to-b from-accent/40 to-transparent -translate-x-1/2" />
+                  <div className="lg:hidden absolute left-1/2 -bottom-6 w-px h-12 bg-gradient-to-b from-amber-400/50 to-transparent -translate-x-1/2" />
                 )}
                 
                 <StationCard
