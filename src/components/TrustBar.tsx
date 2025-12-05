@@ -29,30 +29,33 @@ const stats = [
 
 const TrustBar = () => {
   return (
-    <section className="relative py-12 bg-card border-y border-border">
-      {/* Rail Line Top */}
-      <div className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
+    <section className="relative py-16 lg:py-20 bg-card overflow-hidden">
+      {/* Subtle gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/[0.02] via-transparent to-accent/[0.02]" />
       
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+      {/* Top decorative line */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+      
+      <div className="container mx-auto px-4 relative">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {stats.map((stat, index) => (
             <div 
               key={index}
-              className="text-center group"
+              className="text-center group animate-fade-in-up"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              {/* Icon Circle */}
-              <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 mb-4 group-hover:bg-accent/20 transition-colors duration-300">
-                <stat.icon className="w-6 h-6 text-primary group-hover:text-accent transition-colors duration-300" />
+              {/* Icon with glow effect */}
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/5 mb-5 group-hover:bg-accent/10 transition-all duration-300 group-hover:scale-110">
+                <stat.icon className="w-7 h-7 text-primary group-hover:text-accent transition-colors duration-300" />
               </div>
               
-              {/* Number */}
-              <div className="text-3xl md:text-4xl font-serif font-bold text-primary mb-1">
+              {/* Number with gradient */}
+              <div className="text-4xl lg:text-5xl font-serif font-bold text-primary mb-2 tracking-tight">
                 {stat.number}
               </div>
               
               {/* Label */}
-              <div className="font-semibold text-foreground mb-1">
+              <div className="font-semibold text-foreground mb-1 text-sm uppercase tracking-wide">
                 {stat.label}
               </div>
               
@@ -65,8 +68,8 @@ const TrustBar = () => {
         </div>
       </div>
 
-      {/* Rail Line Bottom */}
-      <div className="absolute left-0 right-0 bottom-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
+      {/* Bottom decorative line */}
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
     </section>
   );
 };

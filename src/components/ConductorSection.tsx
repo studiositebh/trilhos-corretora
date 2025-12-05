@@ -1,23 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { MessageCircle, CheckCircle2, Users, HeartHandshake, Award } from 'lucide-react';
-
-const differentials = [
-  {
-    icon: Users,
-    title: 'Atendimento Humanizado',
-    description: 'Sem robôs. Você fala diretamente com especialistas.'
-  },
-  {
-    icon: HeartHandshake,
-    title: 'Consultoria Personalizada',
-    description: 'Analisamos suas necessidades reais, não vendemos pacotes prontos.'
-  },
-  {
-    icon: Award,
-    title: 'Parceiros de Confiança',
-    description: 'Trabalhamos apenas com as seguradoras mais sólidas do mercado.'
-  }
-];
+import { MessageCircle, CheckCircle2, Quote } from 'lucide-react';
 
 const ConductorSection = () => {
   const handleWhatsApp = () => {
@@ -25,85 +7,120 @@ const ConductorSection = () => {
   };
 
   return (
-    <section className="py-20 bg-muted relative overflow-hidden">
-      {/* Decorative Background Pattern */}
-      <div className="absolute inset-0 opacity-[0.02]">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }} />
-      </div>
-
-      {/* Rail Lines */}
-      <div className="absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-primary/10 to-transparent hidden lg:block" />
-      <div className="absolute right-8 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-primary/10 to-transparent hidden lg:block" />
+    <section className="py-24 lg:py-32 bg-background relative overflow-hidden">
+      {/* Decorative Elements */}
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-muted/50 to-transparent" />
+      <div className="absolute bottom-20 left-20 w-64 h-64 rounded-full bg-accent/5 blur-3xl" />
 
       <div className="container mx-auto px-4 relative">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left Content */}
-            <div>
-              <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-3">
-                Nosso Diferencial
-              </span>
-              <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">
-                O Maquinista da Sua Tranquilidade
+        <div className="max-w-6xl mx-auto">
+          {/* Editorial Layout - Asymmetric Grid */}
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            
+            {/* Left Content - Takes 7 columns */}
+            <div className="lg:col-span-7 order-2 lg:order-1">
+              {/* Section Label */}
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-px bg-accent" />
+                <span className="text-accent font-semibold text-sm uppercase tracking-[0.2em]">
+                  Nosso Diferencial
+                </span>
+              </div>
+
+              {/* Headline */}
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground mb-6 leading-[1.1]">
+                O Maquinista da Sua
+                <span className="block gradient-text-accent">Tranquilidade</span>
               </h2>
-              <p className="text-xl text-secondary font-medium mb-4">
-                Cansado da burocracia e do "segurês"?
-              </p>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
+
+              {/* Pain Point */}
+              <div className="relative pl-6 mb-8 border-l-2 border-secondary/30">
+                <Quote className="absolute -left-3 -top-1 w-6 h-6 text-secondary/40" />
+                <p className="text-xl lg:text-2xl text-secondary font-serif italic">
+                  Cansado da burocracia e do "segurês"?
+                </p>
+              </div>
+
+              {/* Solution */}
+              <p className="text-muted-foreground text-lg mb-8 leading-relaxed max-w-xl">
                 Na Trilhos, somos os maquinistas da sua tranquilidade. Atuamos com 
                 <strong className="text-foreground"> consultoria humanizada</strong>, não apenas venda. 
                 Entendemos suas necessidades reais e encontramos a proteção ideal para cada fase da sua vida.
               </p>
 
-              {/* Benefits List */}
-              <div className="space-y-3 mb-8">
+              {/* Benefits List - Premium Style */}
+              <div className="grid sm:grid-cols-2 gap-4 mb-10">
                 {[
                   'Análise completa e sem compromisso',
                   'Comparativo entre as melhores seguradoras',
-                  'Suporte contínuo na vigência do seguro',
+                  'Suporte contínuo na vigência',
                   'Auxílio completo em caso de sinistro'
                 ].map((benefit, index) => (
-                  <div key={index} className="flex items-center gap-3">
+                  <div 
+                    key={index} 
+                    className="flex items-center gap-3 p-3 rounded-lg bg-muted/50 hover:bg-muted transition-colors"
+                  >
                     <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0" />
-                    <span className="text-foreground">{benefit}</span>
+                    <span className="text-foreground text-sm font-medium">{benefit}</span>
                   </div>
                 ))}
               </div>
 
+              {/* CTA */}
               <Button 
                 variant="cta" 
                 size="lg"
                 onClick={handleWhatsApp}
+                className="cta-glow"
               >
                 <MessageCircle className="w-5 h-5" />
                 Quero uma consultoria personalizada
               </Button>
             </div>
 
-            {/* Right Content - Differentials */}
-            <div className="space-y-6">
-              {differentials.map((item, index) => (
-                <div 
-                  key={index}
-                  className="bg-card rounded-xl p-6 shadow-soft border border-border hover:shadow-card transition-shadow duration-300"
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 flex-shrink-0">
-                      <item.icon className="w-6 h-6 text-primary" />
+            {/* Right Content - Visual Card - Takes 5 columns */}
+            <div className="lg:col-span-5 order-1 lg:order-2">
+              <div className="relative">
+                {/* Background decorative card */}
+                <div className="absolute -inset-4 bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl transform rotate-3" />
+                
+                {/* Main Card */}
+                <div className="relative glass-card-strong rounded-2xl p-8 lg:p-10">
+                  {/* Stats Grid */}
+                  <div className="space-y-8">
+                    {/* Stat Item */}
+                    <div className="text-center pb-8 border-b border-border">
+                      <div className="text-5xl lg:text-6xl font-serif font-bold text-primary mb-2">
+                        100%
+                      </div>
+                      <div className="text-muted-foreground text-sm uppercase tracking-wide">
+                        Foco no Cliente
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground mb-1">
-                        {item.title}
-                      </h3>
-                      <p className="text-muted-foreground text-sm">
-                        {item.description}
-                      </p>
+
+                    {/* Features */}
+                    <div className="space-y-4">
+                      {[
+                        { label: 'Atendimento Humanizado', desc: 'Sem robôs, fale com especialistas' },
+                        { label: 'Consultoria Personalizada', desc: 'Soluções sob medida' },
+                        { label: 'Parceiros de Confiança', desc: 'As melhores seguradoras' }
+                      ].map((item, index) => (
+                        <div key={index} className="flex items-start gap-4 p-4 rounded-xl bg-muted/30 hover:bg-muted/50 transition-colors">
+                          <div className="w-2 h-2 rounded-full bg-accent mt-2 flex-shrink-0" />
+                          <div>
+                            <div className="font-semibold text-foreground text-sm mb-0.5">
+                              {item.label}
+                            </div>
+                            <div className="text-muted-foreground text-xs">
+                              {item.desc}
+                            </div>
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </div>
-              ))}
+              </div>
             </div>
           </div>
         </div>

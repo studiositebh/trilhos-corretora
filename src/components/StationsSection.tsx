@@ -58,39 +58,71 @@ const stations = [
 
 const StationsSection = () => {
   return (
-    <section id="estacoes" className="py-20 bg-background relative">
-      {/* Decorative Elements */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+    <section id="estacoes" className="py-24 lg:py-32 bg-muted relative overflow-hidden">
+      {/* Subtle Background Gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-muted to-background" />
       
-      <div className="container mx-auto px-4">
+      {/* Decorative Elements */}
+      <div className="absolute top-20 left-10 w-72 h-72 rounded-full bg-accent/5 blur-3xl" />
+      <div className="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-primary/5 blur-3xl" />
+      
+      <div className="container mx-auto px-4 relative">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-3">
+        <div className="text-center max-w-3xl mx-auto mb-20">
+          <span className="inline-block text-accent font-semibold text-sm uppercase tracking-[0.2em] mb-4">
             Nossos Produtos
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground mb-6">
             As Estações da Sua Vida
           </h2>
-          <p className="text-muted-foreground text-lg">
+          <p className="text-muted-foreground text-lg leading-relaxed">
             Em cada fase, uma proteção sob medida. Descubra a solução ideal para você e sua família.
           </p>
         </div>
 
-        {/* Rail Track Connector */}
-        <div className="hidden lg:block absolute left-1/2 -translate-x-1/2 top-[280px] h-[calc(100%-360px)] w-0.5 bg-gradient-to-b from-accent/30 via-accent/20 to-accent/30" />
+        {/* Visual Journey - Station Cards with Rail Line */}
+        <div className="relative">
+          {/* Horizontal Rail Line - Desktop */}
+          <div className="hidden lg:block absolute top-8 left-[10%] right-[10%] h-[2px]">
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent/40 to-transparent" />
+            {/* Animated train light effect */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent to-transparent opacity-50 animate-pulse" style={{ animationDuration: '3s' }} />
+          </div>
 
-        {/* Station Cards Grid */}
-        <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Horizontal Rail Line */}
-          <div className="hidden lg:block absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary/10 via-accent/30 to-primary/10 -translate-y-6" />
-          
-          {stations.map((station, index) => (
-            <StationCard
-              key={index}
-              {...station}
-              index={index}
-            />
-          ))}
+          {/* Station Connector Dots - Desktop */}
+          <div className="hidden lg:flex absolute top-8 left-[10%] right-[10%] justify-between -translate-y-1/2">
+            {stations.map((_, index) => (
+              <div 
+                key={index} 
+                className="relative"
+                style={{ 
+                  left: `${index * (100 / (stations.length - 1))}%`,
+                  transform: 'translateX(-50%)'
+                }}
+              >
+                <div className="w-4 h-4 rounded-full bg-background border-2 border-accent shadow-lg" 
+                  style={{ boxShadow: '0 0 15px hsl(var(--accent) / 0.4)' }} 
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* Station Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 pt-12">
+            {stations.map((station, index) => (
+              <div key={index} className="relative">
+                {/* Vertical connector line - Mobile/Tablet */}
+                {index < stations.length - 1 && (
+                  <div className="lg:hidden absolute left-1/2 -bottom-6 w-px h-12 bg-gradient-to-b from-accent/40 to-transparent -translate-x-1/2" />
+                )}
+                
+                <StationCard
+                  {...station}
+                  index={index}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
