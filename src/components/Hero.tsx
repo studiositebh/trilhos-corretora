@@ -55,7 +55,7 @@ const Hero = () => {
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-[800] text-white mb-8 leading-[1.05] animate-fade-in-up animation-delay-100 tracking-tight" style={{ textShadow: '0 4px 12px rgba(0,0,0,0.5), 0 2px 4px rgba(0,0,0,0.4)' }}>
             A vida nos trilhos.
             <br />
-            <span className="gradient-text-warm" style={{ textShadow: '0 4px 12px rgba(0,0,0,0.4), 0 2px 4px rgba(0,0,0,0.3)' }}>O futuro sob controle.</span>
+            <span className="text-amber-400 font-[800]" style={{ textShadow: 'none' }}>O futuro sob controle.</span>
           </h1>
 
           {/* Subheadline with strong shadow */}
