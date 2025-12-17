@@ -97,7 +97,7 @@ const SegmentationSection = () => {
           </div>
 
           {/* For Your Business */}
-          <div className="group relative bg-gradient-to-br from-secondary via-secondary to-secondary/90 rounded-3xl overflow-hidden">
+          <div className="group relative bg-gradient-to-br from-[#e2d37d] via-[#e2d37d] to-[#d4c46d] rounded-3xl overflow-hidden">
             {/* Background Photo */}
             <div className="absolute inset-0">
               <img 
@@ -105,19 +105,19 @@ const SegmentationSection = () => {
                 alt="Equipe corporativa feliz" 
                 className="w-full h-full object-cover opacity-20 group-hover:opacity-25 transition-opacity duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-br from-secondary/90 via-secondary/85 to-secondary/80" />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#e2d37d]/90 via-[#e2d37d]/85 to-[#d4c46d]/80" />
             </div>
 
-            <div className="relative p-8 lg:p-10 text-secondary-foreground">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white/20 mb-6">
-                <Building className="w-8 h-8 text-white" />
+            <div className="relative p-8 lg:p-10 text-[#242d54]">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[#242d54]/20 mb-6">
+                <Building className="w-8 h-8 text-[#242d54]" />
               </div>
 
               <h3 className="text-2xl md:text-3xl font-bold mb-4">
                 Para Sua Empresa
               </h3>
 
-              <p className="text-secondary-foreground/80 mb-6 leading-relaxed">
+              <p className="text-[#242d54]/80 mb-6 leading-relaxed">
                 Soluções corporativas completas para proteger seu negócio, 
                 seus colaboradores e sua frota. Responsabilidade civil, 
                 seguros empresariais e benefícios corporativos.
@@ -126,25 +126,25 @@ const SegmentationSection = () => {
               {/* Benefits */}
               <div className="grid grid-cols-2 gap-4 mb-8">
                 <div className="flex items-center gap-3">
-                  <Shield className="w-5 h-5 text-white/80" />
+                  <Shield className="w-5 h-5 text-[#242d54]/80" />
                   <span className="text-sm">Responsabilidade Civil</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Car className="w-5 h-5 text-white/80" />
+                  <Car className="w-5 h-5 text-[#242d54]/80" />
                   <span className="text-sm">Frotas</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Heart className="w-5 h-5 text-white/80" />
+                  <Heart className="w-5 h-5 text-[#242d54]/80" />
                   <span className="text-sm">Saúde Corporativa</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Building className="w-5 h-5 text-white/80" />
+                  <Building className="w-5 h-5 text-[#242d54]/80" />
                   <span className="text-sm">Seguro Empresarial</span>
                 </div>
               </div>
 
               {/* Photo Preview */}
-              <div className="mb-6 rounded-2xl overflow-hidden border-2 border-white/10">
+              <div className="mb-6 rounded-2xl overflow-hidden border-2 border-[#242d54]/10">
                 <img 
                   src={teamImg} 
                   alt="Equipe corporativa" 
@@ -156,7 +156,7 @@ const SegmentationSection = () => {
                 variant="heroOutline"
                 size="lg"
                 onClick={() => handleWhatsApp('minha empresa')}
-                className="w-full sm:w-auto bg-white hover:bg-white/90 text-secondary border-0"
+                className="w-full sm:w-auto bg-[#242d54] hover:bg-[#2d3a6d] text-white border-0"
               >
                 Proteger Minha Empresa
               </Button>

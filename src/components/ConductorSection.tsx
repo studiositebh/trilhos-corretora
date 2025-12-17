@@ -42,7 +42,7 @@ const ConductorSection = () => {
                   <div className="flex items-center gap-2">
                     <div className="flex -space-x-1">
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 text-yellow-500 fill-yellow-500" />
+                        <Star key={i} className="w-4 h-4 text-[#e2d37d] fill-[#e2d37d]" />
                       ))}
                     </div>
                     <span className="text-sm font-semibold text-foreground">+500 avaliações</span>
