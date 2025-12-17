@@ -7,36 +7,36 @@ interface StationCardProps {
   description: string;
   features: string[];
   ctaText: string;
-  color: 'amber' | 'orange' | 'gold' | 'coral';
+  color: 'navy' | 'navyLight' | 'slate' | 'wine';
   index: number;
 }
 
 const colorStyles = {
-  amber: {
-    iconBg: 'bg-amber-100',
-    iconColor: 'text-amber-600',
-    accentBorder: 'border-amber-200',
-    hoverBorder: 'hover:border-amber-300',
-    bullet: 'bg-amber-500',
-    buttonHover: 'hover:bg-amber-50',
+  navy: {
+    iconBg: 'bg-[#242d54]/10',
+    iconColor: 'text-[#242d54]',
+    accentBorder: 'border-[#242d54]/20',
+    hoverBorder: 'hover:border-[#242d54]/40',
+    bullet: 'bg-[#242d54]',
+    buttonHover: 'hover:bg-[#242d54]/5',
   },
-  orange: {
-    iconBg: 'bg-orange-100',
-    iconColor: 'text-orange-600',
-    accentBorder: 'border-orange-200',
-    hoverBorder: 'hover:border-orange-300',
-    bullet: 'bg-orange-500',
-    buttonHover: 'hover:bg-orange-50',
+  navyLight: {
+    iconBg: 'bg-[#2d3a6d]/10',
+    iconColor: 'text-[#2d3a6d]',
+    accentBorder: 'border-[#2d3a6d]/20',
+    hoverBorder: 'hover:border-[#2d3a6d]/40',
+    bullet: 'bg-[#2d3a6d]',
+    buttonHover: 'hover:bg-[#2d3a6d]/5',
   },
-  gold: {
-    iconBg: 'bg-yellow-100',
-    iconColor: 'text-yellow-600',
-    accentBorder: 'border-yellow-200',
-    hoverBorder: 'hover:border-yellow-300',
-    bullet: 'bg-yellow-500',
-    buttonHover: 'hover:bg-yellow-50',
+  slate: {
+    iconBg: 'bg-slate-100',
+    iconColor: 'text-slate-600',
+    accentBorder: 'border-slate-200',
+    hoverBorder: 'hover:border-slate-300',
+    bullet: 'bg-slate-500',
+    buttonHover: 'hover:bg-slate-50',
   },
-  coral: {
+  wine: {
     iconBg: 'bg-rose-100',
     iconColor: 'text-rose-600',
     accentBorder: 'border-rose-200',
@@ -58,10 +58,10 @@ const StationCard = ({ icon: Icon, title, description, features, ctaText, color,
       className={`group relative bg-card rounded-3xl p-6 lg:p-8 transition-all duration-500 hover:shadow-elevated hover:-translate-y-2 animate-fade-in-up border ${styles.accentBorder} ${styles.hoverBorder}`}
       style={{ 
         animationDelay: `${index * 100 + 200}ms`,
-        boxShadow: '0 10px 40px -10px hsl(30 50% 30% / 0.15)'
+        boxShadow: '0 10px 40px -10px hsl(229 40% 30% / 0.15)'
       }}
     >
-      {/* Icon with Warm Circular Background */}
+      {/* Icon with Circular Background */}
       <div className={`w-14 h-14 rounded-2xl ${styles.iconBg} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-soft`}>
         <Icon className={`w-7 h-7 ${styles.iconColor}`} />
       </div>
