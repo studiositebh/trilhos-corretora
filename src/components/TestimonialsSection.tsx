@@ -31,8 +31,8 @@ const TestimonialsSection = () => {
         {/* Section Header */}
         <div className="text-center mb-14">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-12 h-px bg-gradient-to-r from-amber-500 to-orange-500" />
-            <span className="text-amber-600 font-semibold text-sm uppercase tracking-[0.2em]">
+            <div className="w-12 h-px bg-gradient-to-r from-[#242d54] to-[#2d3a6d]" />
+            <span className="text-[#242d54] font-semibold text-sm uppercase tracking-[0.2em]">
               Depoimentos
             </span>
           </div>
@@ -54,7 +54,7 @@ const TestimonialsSection = () => {
               {/* Stars */}
               <div className="flex gap-1 mb-4">
                 {Array.from({ length: testimonial.rating }).map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
+                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                 ))}
               </div>
 
@@ -68,7 +68,7 @@ const TestimonialsSection = () => {
                 <img
                   src={testimonial.avatar}
                   alt={testimonial.name}
-                  className="w-12 h-12 rounded-full object-cover ring-2 ring-amber-200"
+                  className="w-12 h-12 rounded-full object-cover ring-2 ring-[#242d54]/20"
                 />
                 <div>
                   <p className="font-semibold text-foreground">{testimonial.name}</p>

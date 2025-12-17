@@ -32,8 +32,8 @@ const BlogSection = () => {
         {/* Section Header */}
         <div className="text-center mb-14">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-12 h-px bg-gradient-to-r from-amber-500 to-orange-500" />
-            <span className="text-amber-600 font-semibold text-sm uppercase tracking-[0.2em]">
+            <div className="w-12 h-px bg-gradient-to-r from-[#242d54] to-[#2d3a6d]" />
+            <span className="text-[#242d54] font-semibold text-sm uppercase tracking-[0.2em]">
               Blog
             </span>
           </div>
@@ -59,7 +59,7 @@ const BlogSection = () => {
                   alt={post.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <span className="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-medium text-primary">
+                <span className="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-medium text-[#242d54]">
                   {post.category}
                 </span>
               </div>
@@ -70,13 +70,13 @@ const BlogSection = () => {
                   <Calendar className="w-4 h-4" />
                   <span>{post.date}</span>
                 </div>
-                <h3 className="font-bold text-lg text-foreground mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                <h3 className="font-bold text-lg text-foreground mb-2 line-clamp-2 group-hover:text-[#242d54] transition-colors">
                   {post.title}
                 </h3>
                 <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
                   {post.excerpt}
                 </p>
-                <button className="text-primary font-medium text-sm inline-flex items-center gap-1 group/btn">
+                <button className="text-[#242d54] font-medium text-sm inline-flex items-center gap-1 group/btn">
                   Ler mais
                   <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
                 </button>
@@ -87,7 +87,7 @@ const BlogSection = () => {
 
         {/* View All Button */}
         <div className="text-center mt-12">
-          <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-white">
+          <Button variant="outline" size="lg" className="border-[#242d54] text-[#242d54] hover:bg-[#242d54] hover:text-white">
             Ver todos os artigos
             <ArrowRight className="w-5 h-5 ml-2" />
           </Button>

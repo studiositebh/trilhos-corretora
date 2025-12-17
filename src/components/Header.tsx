@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import logoTrilhos from '@/assets/logo-trilhos.png';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -39,14 +40,13 @@ const Header = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          {/* Logo Text */}
-          <a href="/" className="flex flex-col leading-none">
-            <span className={`text-2xl md:text-3xl font-extrabold tracking-tight transition-colors duration-300 ${isScrolled ? 'text-[#0f172a]' : 'text-white'}`}>
-              TRILHOS
-            </span>
-            <span className={`text-[10px] md:text-xs font-medium uppercase tracking-[0.3em] transition-colors duration-300 ${isScrolled ? 'text-[#0f172a]' : 'text-white/90'}`}>
-              Corretora de Seguros
-            </span>
+          {/* Logo Image */}
+          <a href="/" className="flex items-center">
+            <img 
+              src={logoTrilhos} 
+              alt="Trilhos Corretora de Seguros" 
+              className={`h-12 md:h-14 w-auto transition-all duration-300 ${isScrolled ? '' : 'brightness-0 invert'}`}
+            />
           </a>
 
           {/* Desktop Navigation */}
@@ -65,7 +65,7 @@ const Header = () => {
               variant="default"
               size="sm"
               onClick={() => window.open('https://wa.me/5531999999999', '_blank')}
-              className="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-white"
+              className="bg-[#242d54] hover:bg-[#2d3a6d] text-white"
             >
               Fale Conosco
             </Button>
@@ -97,7 +97,7 @@ const Header = () => {
               <Button
                 variant="default"
                 onClick={() => window.open('https://wa.me/5531999999999', '_blank')}
-                className="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-white w-full"
+                className="bg-[#242d54] hover:bg-[#2d3a6d] text-white w-full"
               >
                 Fale Conosco
               </Button>
