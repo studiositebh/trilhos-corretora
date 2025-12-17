@@ -3,12 +3,13 @@ import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Train, Lock } from 'lucide-react';
+import { Train, Lock, Eye, EyeOff } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 const UnderConstruction = () => {
   const [showLogin, setShowLogin] = useState(false);
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
@@ -80,7 +81,16 @@ const UnderConstruction = () => {
             </div>
             <div>
               <Label htmlFor="password" className="text-slate-700">Senha</Label>
-              <Input id="password" type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Digite sua senha" className="mt-1" />
+              <div className="relative mt-1">
+                <Input id="password" type={showPassword ? "text" : "password"} value={password} onChange={e => setPassword(e.target.value)} placeholder="Digite sua senha" className="pr-10" />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 hover:text-slate-700"
+                >
+                  {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                </button>
+              </div>
             </div>
             <div className="flex gap-3 pt-2">
               <Button type="button" variant="outline" onClick={() => setShowLogin(false)} className="flex-1">
