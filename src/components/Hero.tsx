@@ -44,7 +44,7 @@ const Hero = () => {
         <div className="max-w-4xl">
           {/* Premium Badge */}
           <div className="inline-flex items-center gap-3 glass-card rounded-full px-5 py-2.5 mb-8 animate-fade-in-up bg-white/10 backdrop-blur-md border-white/20">
-            <Shield className="w-4 h-4 text-white" />
+            <Shield className="w-4 h-4 text-[#e2d37d]" />
             <span className="text-white/90 text-sm font-medium tracking-wide">
               Corretora Especializada em Seguros
             </span>
@@ -54,7 +54,7 @@ const Hero = () => {
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-8 leading-[1.05] animate-fade-in-up animation-delay-100 tracking-tight drop-shadow-lg">
             A vida nos trilhos.
             <br />
-            <span className="text-[#b8c4e0]">O futuro sob controle.</span>
+            <span className="text-[#e2d37d]">O futuro sob controle.</span>
           </h1>
 
           {/* Subheadline */}
@@ -93,7 +93,7 @@ const Hero = () => {
               'Atendimento humanizado'
             ].map((item, index) => (
               <div key={index} className="flex items-center gap-2.5 text-white/80">
-                <div className="w-2 h-2 rounded-full bg-white shadow-lg" style={{ boxShadow: '0 0 10px hsl(229 40% 50% / 0.5)' }} />
+                <div className="w-2 h-2 rounded-full bg-[#e2d37d] shadow-lg" style={{ boxShadow: '0 0 10px hsl(51 61% 69% / 0.5)' }} />
                 <span className="text-sm font-medium tracking-wide">{item}</span>
               </div>
             ))}

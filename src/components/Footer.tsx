@@ -52,7 +52,7 @@ const Footer = () => {
                 <li key={index}>
                   <a 
                     href="#estacoes" 
-                    className="flex items-center gap-3 text-primary-foreground/60 hover:text-accent transition-colors group"
+                    className="flex items-center gap-3 text-primary-foreground/60 hover:text-[#e2d37d] transition-colors group"
                   >
                     <item.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
                     <span className="text-sm">{item.label}</span>
@@ -73,7 +73,7 @@ const Footer = () => {
                   href="https://wa.me/5531999999999"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-start gap-3 text-primary-foreground/60 hover:text-accent transition-colors group"
+                  className="flex items-start gap-3 text-primary-foreground/60 hover:text-[#e2d37d] transition-colors group"
                 >
                   <Phone className="w-5 h-5 mt-0.5 flex-shrink-0 group-hover:scale-110 transition-transform" />
                   <div>
@@ -85,7 +85,7 @@ const Footer = () => {
               <li>
                 <a 
                   href="mailto:contato@trilhosseguros.com.br"
-                  className="flex items-start gap-3 text-primary-foreground/60 hover:text-accent transition-colors group"
+                  className="flex items-start gap-3 text-primary-foreground/60 hover:text-[#e2d37d] transition-colors group"
                 >
                   <Mail className="w-5 h-5 mt-0.5 flex-shrink-0 group-hover:scale-110 transition-transform" />
                   <div>
@@ -113,14 +113,14 @@ const Footer = () => {
             </h4>
             <div className="space-y-5">
               <div className="flex items-start gap-3">
-                <Clock className="w-5 h-5 mt-0.5 text-accent flex-shrink-0" />
+                <Clock className="w-5 h-5 mt-0.5 text-[#e2d37d] flex-shrink-0" />
                 <div>
                   <div className="font-medium text-primary-foreground/80 text-sm">Segunda a Sexta</div>
                   <div className="text-primary-foreground/50 text-sm">08:00 às 18:00</div>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <Clock className="w-5 h-5 mt-0.5 text-accent flex-shrink-0" />
+                <Clock className="w-5 h-5 mt-0.5 text-[#e2d37d] flex-shrink-0" />
                 <div>
                   <div className="font-medium text-primary-foreground/80 text-sm">Sábado</div>
                   <div className="text-primary-foreground/50 text-sm">08:00 às 12:00</div>
@@ -128,7 +128,7 @@ const Footer = () => {
               </div>
               <div className="mt-6 p-4 rounded-xl bg-primary-foreground/5 border border-primary-foreground/10">
                 <div className="text-xs text-primary-foreground/70">
-                  <strong className="text-accent">Emergências:</strong> Suporte 24h através das centrais das seguradoras parceiras.
+                  <strong className="text-[#e2d37d]">Emergências:</strong> Suporte 24h através das centrais das seguradoras parceiras.
                 </div>
               </div>
             </div>
@@ -144,10 +144,10 @@ const Footer = () => {
               © {currentYear} Trilhos Corretora de Seguros. Todos os direitos reservados.
             </div>
             <div className="flex items-center gap-8">
-              <a href="#" className="hover:text-accent transition-colors">
+              <a href="#" className="hover:text-[#e2d37d] transition-colors">
                 Política de Privacidade
               </a>
-              <a href="#" className="hover:text-accent transition-colors">
+              <a href="#" className="hover:text-[#e2d37d] transition-colors">
                 Termos de Uso
               </a>
             </div>

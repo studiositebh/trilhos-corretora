@@ -26,9 +26,9 @@
     --primary: 222 47% 11%;
     --primary-foreground: 40 30% 98%;
 
-    /* Secondary - Wine (Sophistication) */
-    --secondary: 352 43% 32%;
-    --secondary-foreground: 40 30% 98%;
+    /* Secondary - Golden Yellow (#e2d37d) */
+    --secondary: 51 61% 69%;
+    --secondary-foreground: 229 40% 20%;
 
     /* Accent - Brand Navy (#242d54) */
     --accent: 229 40% 24%;
@@ -54,17 +54,19 @@
     --navy-light: 229 30% 35%;
     --brand-navy: 229 40% 24%;
     
-    /* Warm Colors - Golden Hour */
-    --golden-amber: 229 40% 24%;
+    /* Warm Colors - Brand Palette */
+    --golden-amber: 51 61% 69%;
+    --golden-yellow: 51 61% 69%;
+    --brand-gold: 51 61% 69%;
     --sunset-orange: 229 35% 30%;
-    --warm-gold: 45 80% 55%;
+    --warm-gold: 51 61% 69%;
     --warm-cream: 40 50% 96%;
     --warm-beige: 35 30% 92%;
     
     /* Legacy colors */
     --terra-orange: 229 40% 24%;
-    --ochre: 45 80% 55%;
-    --wine: 352 43% 32%;
+    --ochre: 51 61% 69%;
+    --wine: 229 40% 30%;
     --off-white: 40 30% 98%;
     --cream: 40 30% 96%;
     --slate: 215 20% 65%;
@@ -111,9 +113,9 @@
     --popover: 222 47% 12%;
     --popover-foreground: 40 30% 98%;
     --primary: 40 30% 98%;
-    --primary-foreground: 222 47% 11%;
-    --secondary: 352 43% 40%;
-    --secondary-foreground: 40 30% 98%;
+    --primary-foreground: 229 40% 24%;
+    --secondary: 51 50% 60%;
+    --secondary-foreground: 229 40% 20%;
     --muted: 222 30% 15%;
     --muted-foreground: 30 20% 65%;
     --accent: 229 40% 35%;
