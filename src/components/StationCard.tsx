@@ -11,7 +11,7 @@ interface StationCardProps {
   index: number;
 }
 
-const colorStyles = {
+const colorStyles: Record<string, { iconBg: string; iconColor: string; accentBorder: string; hoverBorder: string; bullet: string; buttonHover: string }> = {
   navy: {
     iconBg: 'bg-[#242d54]/10',
     iconColor: 'text-[#242d54]',
@@ -51,7 +51,7 @@ const StationCard = ({ icon: Icon, title, description, features, ctaText, color,
     window.open(`https://wa.me/5531999999999?text=Olá! Gostaria de uma cotação de ${title}.`, '_blank');
   };
 
-  const styles = colorStyles[color];
+  const styles = colorStyles[color] || colorStyles.navy;
 
   return (
     <div 
