@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import logoTrilhos from '@/assets/logo-trilhos.png';
+import logoTrilhosFull from '@/assets/logo-trilhos-full.png';
 import logoTrilhosBranca from '@/assets/logo-trilhos-branca.png';
 
 const Header = () => {
@@ -44,7 +44,7 @@ const Header = () => {
           {/* Logo Image */}
           <a href="/" className="flex items-center">
             <img 
-              src={isScrolled ? logoTrilhos : logoTrilhosBranca} 
+              src={isScrolled ? logoTrilhosFull : logoTrilhosBranca} 
               alt="Trilhos Corretora de Seguros" 
               className="h-12 md:h-14 w-auto transition-all duration-300"
             />
