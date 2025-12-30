@@ -3,9 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Train, Lock, Eye, EyeOff } from 'lucide-react';
+import { Lock, Eye, EyeOff } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
-import logoTrilhos from '@/assets/logo-trilhos.png';
+import logoTrilhosFull from '@/assets/logo-trilhos-full.png';
 
 const UnderConstruction = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -34,20 +34,12 @@ const UnderConstruction = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#f8f7f2] via-[#f5f3e8] to-[#e2d37d]/20 flex flex-col items-center justify-center p-6">
-      {/* Animated Train Icon */}
-      <div className="relative mb-8">
-        <div className="w-24 h-24 bg-gradient-to-br from-[#242d54] to-[#2d3a6d] rounded-full flex items-center justify-center shadow-lg animate-pulse">
-          <Train className="w-12 h-12 text-white" />
-        </div>
-        <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-transparent via-[#e2d37d] to-transparent" />
-      </div>
-
       {/* Logo */}
       <div className="text-center mb-8">
         <img 
-          src={logoTrilhos} 
+          src={logoTrilhosFull} 
           alt="Trilhos Corretora de Seguros" 
-          className="h-16 w-auto mx-auto"
+          className="h-24 w-auto mx-auto"
         />
       </div>
 
