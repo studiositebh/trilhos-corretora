@@ -101,25 +101,25 @@ const Header = () => {
                     Para Você
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="w-[650px] p-6 bg-white/95 backdrop-blur-md border border-gray-100 shadow-xl rounded-xl">
-                      <div className="grid grid-cols-3 gap-6">
+                    <div className="w-[750px] p-8 bg-white border border-gray-100 shadow-2xl rounded-2xl">
+                      <div className="grid grid-cols-[1fr_1fr_220px] gap-8">
                         {/* Coluna 1 - Seguros Pessoais */}
                         <div>
-                          <h3 className="text-xs font-semibold text-[#20244A]/60 uppercase tracking-wider mb-3">
+                          <h3 className="text-xs font-semibold text-[#20244A]/60 uppercase tracking-wider mb-4">
                             Seguros Pessoais
                           </h3>
-                          <ul className="space-y-2">
+                          <ul className="space-y-1">
                             {menuParaVoce.seguros.map((item) => (
                               <li key={item.label}>
                                 <NavigationMenuLink asChild>
                                   <button
                                     onClick={() => scrollToSection(item.href)}
-                                    className="group flex items-center gap-3 w-full p-2 rounded-lg hover:bg-[#20244A]/5 transition-colors"
+                                    className="group flex items-center gap-4 w-full p-3 rounded-xl hover:bg-[#20244A]/5 transition-colors"
                                   >
-                                    <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-[#20244A]/10 to-[#e2d37d]/20 flex items-center justify-center group-hover:from-[#20244A]/20 group-hover:to-[#e2d37d]/30 transition-colors">
-                                      <item.icon className="w-4 h-4 text-[#20244A]" />
+                                    <div className="w-10 h-10 flex-shrink-0 rounded-xl bg-gradient-to-br from-[#20244A]/10 to-[#e2d37d]/20 flex items-center justify-center group-hover:from-[#20244A]/20 group-hover:to-[#e2d37d]/30 transition-colors">
+                                      <item.icon className="w-5 h-5 text-[#20244A]" />
                                     </div>
-                                    <span className="text-[#20244A] font-medium group-hover:text-[#e2d37d] transition-colors">
+                                    <span className="text-[#20244A] font-medium whitespace-nowrap group-hover:text-[#e2d37d] transition-colors">
                                       {item.label}
                                     </span>
                                   </button>
@@ -131,21 +131,21 @@ const Header = () => {
 
                         {/* Coluna 2 - Patrimônio */}
                         <div>
-                          <h3 className="text-xs font-semibold text-[#20244A]/60 uppercase tracking-wider mb-3">
+                          <h3 className="text-xs font-semibold text-[#20244A]/60 uppercase tracking-wider mb-4">
                             Patrimônio
                           </h3>
-                          <ul className="space-y-2">
+                          <ul className="space-y-1">
                             {menuParaVoce.patrimonio.map((item) => (
                               <li key={item.label}>
                                 <NavigationMenuLink asChild>
                                   <button
                                     onClick={() => scrollToSection(item.href)}
-                                    className="group flex items-center gap-3 w-full p-2 rounded-lg hover:bg-[#20244A]/5 transition-colors"
+                                    className="group flex items-center gap-4 w-full p-3 rounded-xl hover:bg-[#20244A]/5 transition-colors"
                                   >
-                                    <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-[#20244A]/10 to-[#e2d37d]/20 flex items-center justify-center group-hover:from-[#20244A]/20 group-hover:to-[#e2d37d]/30 transition-colors">
-                                      <item.icon className="w-4 h-4 text-[#20244A]" />
+                                    <div className="w-10 h-10 flex-shrink-0 rounded-xl bg-gradient-to-br from-[#20244A]/10 to-[#e2d37d]/20 flex items-center justify-center group-hover:from-[#20244A]/20 group-hover:to-[#e2d37d]/30 transition-colors">
+                                      <item.icon className="w-5 h-5 text-[#20244A]" />
                                     </div>
-                                    <span className="text-[#20244A] font-medium group-hover:text-[#e2d37d] transition-colors">
+                                    <span className="text-[#20244A] font-medium whitespace-nowrap group-hover:text-[#e2d37d] transition-colors">
                                       {item.label}
                                     </span>
                                   </button>
@@ -156,17 +156,17 @@ const Header = () => {
                         </div>
 
                         {/* Coluna 3 - CTA Card */}
-                        <div className="bg-gradient-to-br from-[#20244A] to-[#2a3361] rounded-xl p-4 flex flex-col justify-between">
+                        <div className="bg-gradient-to-br from-[#20244A] to-[#2a3361] rounded-2xl p-5 flex flex-col justify-between min-h-[200px]">
                           <div>
-                            <h3 className="text-white font-semibold text-sm mb-2">
+                            <h3 className="text-white font-semibold text-base mb-2">
                               Fale com o Maquinista
                             </h3>
-                            <p className="text-white/70 text-xs leading-relaxed">
+                            <p className="text-white/70 text-sm leading-relaxed">
                               Tire suas dúvidas e encontre o seguro ideal para você.
                             </p>
                           </div>
                           <Button
-                            size="sm"
+                            size="default"
                             onClick={() => window.open('https://wa.me/5531999999999', '_blank')}
                             className="mt-4 bg-[#25D366] hover:bg-[#20bd5a] text-white w-full gap-2"
                           >
@@ -187,8 +187,8 @@ const Header = () => {
                     Para Sua Empresa
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="w-[400px] p-6 bg-white/95 backdrop-blur-md border border-gray-100 shadow-xl rounded-xl">
-                      <h3 className="text-xs font-semibold text-[#20244A]/60 uppercase tracking-wider mb-3">
+                    <div className="w-[520px] p-8 bg-white border border-gray-100 shadow-2xl rounded-2xl">
+                      <h3 className="text-xs font-semibold text-[#20244A]/60 uppercase tracking-wider mb-4">
                         Soluções Corporativas
                       </h3>
                       <ul className="grid grid-cols-2 gap-2">
@@ -197,12 +197,12 @@ const Header = () => {
                             <NavigationMenuLink asChild>
                               <button
                                 onClick={() => scrollToSection(item.href)}
-                                className="group flex items-center gap-3 w-full p-3 rounded-lg hover:bg-[#20244A]/5 transition-colors"
+                                className="group flex items-center gap-4 w-full p-3 rounded-xl hover:bg-[#20244A]/5 transition-colors"
                               >
-                                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#20244A]/10 to-[#e2d37d]/20 flex items-center justify-center group-hover:from-[#20244A]/20 group-hover:to-[#e2d37d]/30 transition-colors">
+                                <div className="w-10 h-10 flex-shrink-0 rounded-xl bg-gradient-to-br from-[#20244A]/10 to-[#e2d37d]/20 flex items-center justify-center group-hover:from-[#20244A]/20 group-hover:to-[#e2d37d]/30 transition-colors">
                                   <item.icon className="w-5 h-5 text-[#20244A]" />
                                 </div>
-                                <span className="text-[#20244A] font-medium text-sm group-hover:text-[#e2d37d] transition-colors">
+                                <span className="text-[#20244A] font-medium whitespace-nowrap group-hover:text-[#e2d37d] transition-colors">
                                   {item.label}
                                 </span>
                               </button>
