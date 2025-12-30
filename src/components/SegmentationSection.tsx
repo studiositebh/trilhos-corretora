@@ -14,8 +14,8 @@ const SegmentationSection = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-12 h-px bg-gradient-to-r from-[#242d54] to-[#2d3a6d]" />
-            <span className="text-[#242d54] font-semibold text-sm uppercase tracking-[0.2em]">
+            <div className="w-12 h-px bg-gradient-to-r from-[#20244A] to-[#2a3361]" />
+            <span className="text-[#20244A] font-semibold text-sm uppercase tracking-[0.2em]">
               Para Quem É
             </span>
           </div>
@@ -30,7 +30,7 @@ const SegmentationSection = () => {
         {/* Two Column Split with Photos */}
         <div className="grid lg:grid-cols-2 gap-8">
           {/* For You and Family */}
-          <div className="group relative bg-gradient-to-br from-[#242d54] via-[#242d54] to-[#2d3a6d] rounded-3xl overflow-hidden">
+          <div className="group relative bg-gradient-to-br from-[#20244A] via-[#20244A] to-[#2a3361] rounded-3xl overflow-hidden">
             {/* Background Photo */}
             <div className="absolute inset-0">
               <img 
@@ -38,7 +38,7 @@ const SegmentationSection = () => {
                 alt="Família feliz se abraçando" 
                 className="w-full h-full object-cover opacity-20 group-hover:opacity-25 transition-opacity duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-br from-[#242d54]/90 via-[#242d54]/85 to-[#2d3a6d]/80" />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#20244A]/90 via-[#20244A]/85 to-[#2a3361]/80" />
             </div>
 
             <div className="relative p-8 lg:p-10 text-white">
@@ -89,7 +89,7 @@ const SegmentationSection = () => {
                 variant="heroOutline"
                 size="lg"
                 onClick={() => handleWhatsApp('minha família')}
-                className="w-full sm:w-auto bg-white hover:bg-white/90 text-[#242d54] border-0"
+                className="w-full sm:w-auto bg-white hover:bg-white/90 text-[#20244A] border-0"
               >
                 Proteger Minha Família
               </Button>
@@ -108,16 +108,16 @@ const SegmentationSection = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-[#e2d37d]/90 via-[#e2d37d]/85 to-[#d4c46d]/80" />
             </div>
 
-            <div className="relative p-8 lg:p-10 text-[#242d54]">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[#242d54]/20 mb-6">
-                <Building className="w-8 h-8 text-[#242d54]" />
+            <div className="relative p-8 lg:p-10 text-[#20244A]">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[#20244A]/20 mb-6">
+                <Building className="w-8 h-8 text-[#20244A]" />
               </div>
 
               <h3 className="text-2xl md:text-3xl font-bold mb-4">
                 Para Sua Empresa
               </h3>
 
-              <p className="text-[#242d54]/80 mb-6 leading-relaxed">
+              <p className="text-[#20244A]/80 mb-6 leading-relaxed">
                 Soluções corporativas completas para proteger seu negócio, 
                 seus colaboradores e sua frota. Responsabilidade civil, 
                 seguros empresariais e benefícios corporativos.
@@ -126,25 +126,25 @@ const SegmentationSection = () => {
               {/* Benefits */}
               <div className="grid grid-cols-2 gap-4 mb-8">
                 <div className="flex items-center gap-3">
-                  <Shield className="w-5 h-5 text-[#242d54]/80" />
+                  <Shield className="w-5 h-5 text-[#20244A]/80" />
                   <span className="text-sm">Responsabilidade Civil</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Car className="w-5 h-5 text-[#242d54]/80" />
+                  <Car className="w-5 h-5 text-[#20244A]/80" />
                   <span className="text-sm">Frotas</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Heart className="w-5 h-5 text-[#242d54]/80" />
+                  <Heart className="w-5 h-5 text-[#20244A]/80" />
                   <span className="text-sm">Saúde Corporativa</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Building className="w-5 h-5 text-[#242d54]/80" />
+                  <Building className="w-5 h-5 text-[#20244A]/80" />
                   <span className="text-sm">Seguro Empresarial</span>
                 </div>
               </div>
 
               {/* Photo Preview */}
-              <div className="mb-6 rounded-2xl overflow-hidden border-2 border-[#242d54]/10">
+              <div className="mb-6 rounded-2xl overflow-hidden border-2 border-[#20244A]/10">
                 <img 
                   src={teamImg} 
                   alt="Equipe corporativa" 
@@ -156,7 +156,7 @@ const SegmentationSection = () => {
                 variant="heroOutline"
                 size="lg"
                 onClick={() => handleWhatsApp('minha empresa')}
-                className="w-full sm:w-auto bg-[#242d54] hover:bg-[#2d3a6d] text-white border-0"
+                className="w-full sm:w-auto bg-[#20244A] hover:bg-[#2a3361] text-white border-0"
               >
                 Proteger Minha Empresa
               </Button>

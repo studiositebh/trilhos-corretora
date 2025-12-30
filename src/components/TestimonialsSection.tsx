@@ -31,8 +31,8 @@ const TestimonialsSection = () => {
         {/* Section Header */}
         <div className="text-center mb-14">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-12 h-px bg-gradient-to-r from-[#242d54] to-[#2d3a6d]" />
-            <span className="text-[#242d54] font-semibold text-sm uppercase tracking-[0.2em]">
+            <div className="w-12 h-px bg-gradient-to-r from-[#20244A] to-[#2a3361]" />
+            <span className="text-[#20244A] font-semibold text-sm uppercase tracking-[0.2em]">
               Depoimentos
             </span>
           </div>
@@ -68,7 +68,7 @@ const TestimonialsSection = () => {
                 <img
                   src={testimonial.avatar}
                   alt={testimonial.name}
-                  className="w-12 h-12 rounded-full object-cover ring-2 ring-[#242d54]/20"
+                  className="w-12 h-12 rounded-full object-cover ring-2 ring-[#20244A]/20"
                 />
                 <div>
                   <p className="font-semibold text-foreground">{testimonial.name}</p>

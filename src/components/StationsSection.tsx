@@ -35,18 +35,18 @@ const StationsSection = () => {
   return (
     <section id="estacoes" className="py-24 lg:py-32 bg-warm-gradient relative overflow-hidden">
       {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#242d54]/5 via-slate-50/50 to-[#242d54]/10" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#20244A]/5 via-slate-50/50 to-[#20244A]/10" />
       
       {/* Subtle Glow Effects */}
-      <div className="absolute top-20 left-10 w-72 h-72 rounded-full bg-[#242d54]/10 blur-3xl" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-[#242d54]/10 blur-3xl" />
+      <div className="absolute top-20 left-10 w-72 h-72 rounded-full bg-[#20244A]/10 blur-3xl" />
+      <div className="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-[#20244A]/10 blur-3xl" />
       
       <div className="container mx-auto px-4 relative">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-12 h-px bg-gradient-to-r from-[#242d54] to-[#2d3a6d]" />
-            <span className="text-[#242d54] font-semibold text-sm uppercase tracking-[0.2em]">
+            <div className="w-12 h-px bg-gradient-to-r from-[#20244A] to-[#2a3361]" />
+            <span className="text-[#20244A] font-semibold text-sm uppercase tracking-[0.2em]">
               Nossos Produtos
             </span>
           </div>
@@ -62,9 +62,9 @@ const StationsSection = () => {
         <div className="relative">
           {/* Horizontal Rail Line - Desktop */}
           <div className="hidden lg:block absolute top-8 left-[10%] right-[10%] h-[2px]">
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#242d54]/50 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#20244A]/50 to-transparent" />
             {/* Animated train light effect */}
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#242d54] to-transparent opacity-60 animate-pulse" style={{
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#20244A] to-transparent opacity-60 animate-pulse" style={{
               animationDuration: '3s'
             }} />
           </div>
@@ -76,8 +76,8 @@ const StationsSection = () => {
                 left: `${index * (100 / (stations.length - 1))}%`,
                 transform: 'translateX(-50%)'
               }}>
-                <div className="w-4 h-4 rounded-full bg-white border-2 border-[#242d54] shadow-lg" style={{
-                  boxShadow: '0 0 20px hsl(229 40% 24% / 0.5)'
+                <div className="w-4 h-4 rounded-full bg-white border-2 border-[#20244A] shadow-lg" style={{
+                  boxShadow: '0 0 20px hsl(229 43% 21% / 0.5)'
                 }} />
               </div>
             ))}
@@ -89,7 +89,7 @@ const StationsSection = () => {
               <div key={index} className="relative">
                 {/* Vertical connector line - Mobile/Tablet */}
                 {index < stations.length - 1 && (
-                  <div className="lg:hidden absolute left-1/2 -bottom-6 w-px h-12 bg-gradient-to-b from-[#242d54]/50 to-transparent -translate-x-1/2" />
+                  <div className="lg:hidden absolute left-1/2 -bottom-6 w-px h-12 bg-gradient-to-b from-[#20244A]/50 to-transparent -translate-x-1/2" />
                 )}
                 
                 <StationCard {...station} index={index} />

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import logoTrilhos from '@/assets/logo-trilhos.png';
+import logoTrilhosBranca from '@/assets/logo-trilhos-branca.png';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -43,9 +44,9 @@ const Header = () => {
           {/* Logo Image */}
           <a href="/" className="flex items-center">
             <img 
-              src={logoTrilhos} 
+              src={isScrolled ? logoTrilhos : logoTrilhosBranca} 
               alt="Trilhos Corretora de Seguros" 
-              className={`h-12 md:h-14 w-auto transition-all duration-300 ${isScrolled ? '' : 'brightness-0 invert'}`}
+              className="h-12 md:h-14 w-auto transition-all duration-300"
             />
           </a>
 
@@ -65,7 +66,7 @@ const Header = () => {
               variant="default"
               size="sm"
               onClick={() => window.open('https://wa.me/5531999999999', '_blank')}
-              className="bg-[#242d54] hover:bg-[#2d3a6d] text-white"
+              className="bg-[#20244A] hover:bg-[#2a3361] text-white"
             >
               Fale Conosco
             </Button>
@@ -97,7 +98,7 @@ const Header = () => {
               <Button
                 variant="default"
                 onClick={() => window.open('https://wa.me/5531999999999', '_blank')}
-                className="bg-[#242d54] hover:bg-[#2d3a6d] text-white w-full"
+                className="bg-[#20244A] hover:bg-[#2a3361] text-white w-full"
               >
                 Fale Conosco
               </Button>
