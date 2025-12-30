@@ -15,8 +15,8 @@ const Hero = () => {
         style={{ backgroundImage: `url(${heroBg})` }}
       >
         {/* Navy overlay - Subtle to keep image vibrant */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#242d54]/40 via-[#242d54]/30 to-[#242d54]/45" />
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-[#242d54]/10" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#20244A]/40 via-[#20244A]/30 to-[#20244A]/45" />
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-[#20244A]/10" />
       </div>
 
       {/* Light Rays Effect */}
@@ -30,14 +30,14 @@ const Hero = () => {
 
       {/* Elegant Rail Line Decoration */}
       <div className="absolute left-12 lg:left-20 top-1/4 bottom-1/4 hidden lg:flex flex-col items-center">
-        <div className="w-3 h-3 rounded-full bg-[#242d54] shadow-lg animate-glow-pulse" />
-        <div className="flex-1 w-px bg-gradient-to-b from-[#242d54]/60 via-[#242d54]/40 to-[#242d54]/60" />
-        <div className="w-3 h-3 rounded-full bg-[#242d54] shadow-lg animate-glow-pulse" />
+        <div className="w-3 h-3 rounded-full bg-[#20244A] shadow-lg animate-glow-pulse" />
+        <div className="flex-1 w-px bg-gradient-to-b from-[#20244A]/60 via-[#20244A]/40 to-[#20244A]/60" />
+        <div className="w-3 h-3 rounded-full bg-[#20244A] shadow-lg animate-glow-pulse" />
       </div>
 
       {/* Floating Elements */}
-      <div className="absolute right-20 top-1/4 w-64 h-64 rounded-full bg-[#242d54]/10 blur-3xl hidden lg:block" />
-      <div className="absolute right-40 bottom-1/4 w-48 h-48 rounded-full bg-[#242d54]/10 blur-3xl hidden lg:block" />
+      <div className="absolute right-20 top-1/4 w-64 h-64 rounded-full bg-[#20244A]/10 blur-3xl hidden lg:block" />
+      <div className="absolute right-40 bottom-1/4 w-48 h-48 rounded-full bg-[#20244A]/10 blur-3xl hidden lg:block" />
 
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
@@ -69,7 +69,7 @@ const Hero = () => {
               variant="hero" 
               size="xl"
               onClick={handleWhatsApp}
-              className="cta-glow group bg-[#242d54] hover:bg-[#2d3a6d] text-white border-0"
+              className="cta-glow group bg-[#20244A] hover:bg-[#2a3361] text-white border-0"
             >
               <MessageCircle className="w-5 h-5 transition-transform group-hover:scale-110" />
               Falar com um Especialista Agora

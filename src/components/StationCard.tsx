@@ -13,20 +13,20 @@ interface StationCardProps {
 
 const colorStyles: Record<string, { iconBg: string; iconColor: string; accentBorder: string; hoverBorder: string; bullet: string; buttonHover: string }> = {
   navy: {
-    iconBg: 'bg-[#242d54]/10',
-    iconColor: 'text-[#242d54]',
-    accentBorder: 'border-[#242d54]/20',
-    hoverBorder: 'hover:border-[#242d54]/40',
-    bullet: 'bg-[#242d54]',
-    buttonHover: 'hover:bg-[#242d54]/5',
+    iconBg: 'bg-[#20244A]/10',
+    iconColor: 'text-[#20244A]',
+    accentBorder: 'border-[#20244A]/20',
+    hoverBorder: 'hover:border-[#20244A]/40',
+    bullet: 'bg-[#20244A]',
+    buttonHover: 'hover:bg-[#20244A]/5',
   },
   navyLight: {
-    iconBg: 'bg-[#2d3a6d]/10',
-    iconColor: 'text-[#2d3a6d]',
-    accentBorder: 'border-[#2d3a6d]/20',
-    hoverBorder: 'hover:border-[#2d3a6d]/40',
-    bullet: 'bg-[#2d3a6d]',
-    buttonHover: 'hover:bg-[#2d3a6d]/5',
+    iconBg: 'bg-[#2a3361]/10',
+    iconColor: 'text-[#2a3361]',
+    accentBorder: 'border-[#2a3361]/20',
+    hoverBorder: 'hover:border-[#2a3361]/40',
+    bullet: 'bg-[#2a3361]',
+    buttonHover: 'hover:bg-[#2a3361]/5',
   },
   slate: {
     iconBg: 'bg-slate-100',
@@ -58,7 +58,7 @@ const StationCard = ({ icon: Icon, title, description, features, ctaText, color,
       className={`group relative bg-card rounded-3xl p-6 lg:p-8 transition-all duration-500 hover:shadow-elevated hover:-translate-y-2 animate-fade-in-up border ${styles.accentBorder} ${styles.hoverBorder}`}
       style={{ 
         animationDelay: `${index * 100 + 200}ms`,
-        boxShadow: '0 10px 40px -10px hsl(229 40% 30% / 0.15)'
+        boxShadow: '0 10px 40px -10px hsl(229 43% 25% / 0.15)'
       }}
     >
       {/* Icon with Circular Background */}

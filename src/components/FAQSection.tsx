@@ -31,8 +31,8 @@ const FAQSection = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-12 h-px bg-gradient-to-r from-[#242d54] to-[#2d3a6d]" />
-            <span className="text-[#242d54] font-semibold text-sm uppercase tracking-[0.2em]">
+            <div className="w-12 h-px bg-gradient-to-r from-[#20244A] to-[#2a3361]" />
+            <span className="text-[#20244A] font-semibold text-sm uppercase tracking-[0.2em]">
               Dúvidas Frequentes
             </span>
           </div>
@@ -53,7 +53,7 @@ const FAQSection = () => {
                 value={`item-${index}`}
                 className="bg-card rounded-xl border border-border px-6 shadow-soft data-[state=open]:shadow-card transition-shadow"
               >
-                <AccordionTrigger className="text-left font-semibold text-foreground hover:text-[#242d54] hover:no-underline py-5">
+                <AccordionTrigger className="text-left font-semibold text-foreground hover:text-[#20244A] hover:no-underline py-5">
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground pb-5 leading-relaxed">

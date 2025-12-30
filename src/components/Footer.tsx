@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, Clock, Heart, Activity, Car, Building2 } from 'lucide-react';
+import logoTrilhosBranca from '@/assets/logo-trilhos-branca.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -19,12 +20,11 @@ const Footer = () => {
           {/* Column 1 - About */}
           <div className="lg:col-span-1">
             <div className="mb-6">
-              <h3 className="text-3xl font-extrabold tracking-tight">
-                TRILHOS
-              </h3>
-              <span className="text-primary-foreground/50 text-xs font-medium tracking-[0.3em] uppercase">
-                Corretora de Seguros
-              </span>
+              <img 
+                src={logoTrilhosBranca} 
+                alt="Trilhos Corretora de Seguros" 
+                className="h-14 w-auto"
+              />
             </div>
             <p className="text-primary-foreground/70 leading-relaxed mb-6 text-sm">
               Guiando você e sua família pelos trilhos da segurança financeira. 

@@ -10,9 +10,9 @@ const ConductorSection = () => {
   return (
     <section className="py-24 lg:py-32 bg-background relative overflow-hidden">
       {/* Decorative Elements */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#242d54]/5 to-transparent" />
-      <div className="absolute bottom-20 left-20 w-64 h-64 rounded-full bg-[#242d54]/10 blur-3xl" />
-      <div className="absolute top-20 right-40 w-48 h-48 rounded-full bg-[#242d54]/10 blur-3xl" />
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#20244A]/5 to-transparent" />
+      <div className="absolute bottom-20 left-20 w-64 h-64 rounded-full bg-[#20244A]/10 blur-3xl" />
+      <div className="absolute top-20 right-40 w-48 h-48 rounded-full bg-[#20244A]/10 blur-3xl" />
 
       <div className="container mx-auto px-4 relative">
         <div className="max-w-6xl mx-auto">
@@ -23,8 +23,8 @@ const ConductorSection = () => {
             <div className="lg:col-span-5 order-2 lg:order-1">
               <div className="relative">
                 {/* Background decorative card */}
-                <div className="absolute -inset-4 bg-gradient-to-br from-[#242d54]/20 to-[#2d3a6d]/20 rounded-3xl transform rotate-3" />
-                <div className="absolute -inset-4 bg-gradient-to-tr from-[#242d54]/10 to-[#2d3a6d]/10 rounded-3xl transform -rotate-2" />
+                <div className="absolute -inset-4 bg-gradient-to-br from-[#20244A]/20 to-[#2a3361]/20 rounded-3xl transform rotate-3" />
+                <div className="absolute -inset-4 bg-gradient-to-tr from-[#20244A]/10 to-[#2a3361]/10 rounded-3xl transform -rotate-2" />
                 
                 {/* Photo Container */}
                 <div className="relative rounded-3xl overflow-hidden shadow-elevated">
@@ -34,7 +34,7 @@ const ConductorSection = () => {
                     className="w-full h-auto object-cover aspect-[3/4]"
                   />
                   {/* Overlay on photo */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#242d54]/20 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#20244A]/20 via-transparent to-transparent" />
                 </div>
                 
                 {/* Floating Badge */}
@@ -55,8 +55,8 @@ const ConductorSection = () => {
             <div className="lg:col-span-7 order-1 lg:order-2">
               {/* Section Label */}
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-px bg-gradient-to-r from-[#242d54] to-[#2d3a6d]" />
-                <span className="text-[#242d54] font-semibold text-sm uppercase tracking-[0.2em]">
+                <div className="w-12 h-px bg-gradient-to-r from-[#20244A] to-[#2a3361]" />
+                <span className="text-[#20244A] font-semibold text-sm uppercase tracking-[0.2em]">
                   Nosso Diferencial
                 </span>
               </div>
@@ -64,13 +64,13 @@ const ConductorSection = () => {
               {/* Headline */}
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-[1.1]">
                 O Maquinista da Sua
-                <span className="block text-[#242d54]">Tranquilidade</span>
+                <span className="block text-[#20244A]">Tranquilidade</span>
               </h2>
 
               {/* Pain Point */}
-              <div className="relative pl-6 mb-8 border-l-2 border-[#242d54]/40">
-                <Quote className="absolute -left-3 -top-1 w-6 h-6 text-[#242d54]/60" />
-                <p className="text-xl lg:text-2xl text-[#242d54] font-medium italic">
+              <div className="relative pl-6 mb-8 border-l-2 border-[#20244A]/40">
+                <Quote className="absolute -left-3 -top-1 w-6 h-6 text-[#20244A]/60" />
+                <p className="text-xl lg:text-2xl text-[#20244A] font-medium italic">
                   Cansado da burocracia e do "segurês"?
                 </p>
               </div>
@@ -92,9 +92,9 @@ const ConductorSection = () => {
                 ].map((benefit, index) => (
                   <div 
                     key={index} 
-                    className="flex items-center gap-3 p-3 rounded-2xl bg-gradient-to-r from-[#242d54]/5 to-[#2d3a6d]/5 hover:from-[#242d54]/10 hover:to-[#2d3a6d]/10 transition-colors border border-[#242d54]/10"
+                    className="flex items-center gap-3 p-3 rounded-2xl bg-gradient-to-r from-[#20244A]/5 to-[#2a3361]/5 hover:from-[#20244A]/10 hover:to-[#2a3361]/10 transition-colors border border-[#20244A]/10"
                   >
-                    <CheckCircle2 className="w-5 h-5 text-[#242d54] flex-shrink-0" />
+                    <CheckCircle2 className="w-5 h-5 text-[#20244A] flex-shrink-0" />
                     <span className="text-foreground text-sm font-medium">{benefit}</span>
                   </div>
                 ))}
@@ -105,7 +105,7 @@ const ConductorSection = () => {
                 variant="cta" 
                 size="lg"
                 onClick={handleWhatsApp}
-                className="cta-glow bg-[#242d54] hover:bg-[#2d3a6d] text-white border-0"
+                className="cta-glow bg-[#20244A] hover:bg-[#2a3361] text-white border-0"
               >
                 <MessageCircle className="w-5 h-5" />
                 Quero uma consultoria personalizada
